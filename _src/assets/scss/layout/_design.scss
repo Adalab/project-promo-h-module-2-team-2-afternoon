@@ -1,0 +1,10 @@
+.colormix {
+    width: rem(30);
+    height: rem(25);
+    &__darkblue {
+        background-color: $darkblue;
+    }
+    &__blue{
+        background-color: $dirtyblue;
+    }
+}
