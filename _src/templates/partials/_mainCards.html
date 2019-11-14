@@ -14,7 +14,13 @@
 					<h2 class="title"><i class="logo fas fa-share-alt"></i>comparte</h2>
 				<i class="arrow-button fas fa-chevron-down"></i>
 			</div>
-			<button class="create-button form imput submit" type='submit'><i class="logo-button far fa-address-card"></i>crear tarjeta</button>
+			<button id ="create-button" class="create-button form imput submit" type='submit'><i class="logo-button far fa-address-card"></i>crear tarjeta</button>
+		</div>
+		
+		<div id ="share-card" class="active-share create__share-two">
+			<h2 class="title-share"><span>la</span> tarjeta ha sido creada</h2>
+			<a class="link-share" href="#">https://awesome-profile-card.com?id=A456DF0001</a>
+			<button class="create-button-two form imput submit" type='submit'><i class="logo-button fab fa-twitter"></i><span>compartir</span> en twitter</button>
 
 
 				<!--<button type='submit'>crear tarjeta #f2bc; </button>
@@ -70,6 +76,30 @@
 
 			elementButton.addEventListener('click',login);
 
+			--------------------------
+
+			const elementsButtons = document.querySelectorAll('.add-to-card;
+			const elementWrapperCart = document.querySelector('#my-cart');
+			function addToCard(event){
+				//console.log('hola');
+				const product = event.target.previusElementSibling.innerHTML;
+				displayProducts(product);
+			}
+
+			function displayProducts(myProduct){
+				alert(`Has añadido ${myProduct} a tu cesta`)
+				increaseProductQuantity();
+			}
+
+			function increaseProductQuantity(){
+				let productQuantity = parseInt(elementWrapperCart.innerHTML);
+				productQuantity = productQuantity + 1;
+				elementWrapperCart.innerHTML = productQuantity;
+			}
+
+			elementButtons.forEach(fnction(elementButton){
+				elementButton.addEventListener('click',addToCart);
+			})
 		-->
 			</div>
 		</div>

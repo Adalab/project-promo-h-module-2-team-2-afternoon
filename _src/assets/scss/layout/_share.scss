@@ -1,10 +1,9 @@
 .create {
   padding: 27px 23px 30px;
-  background-image: linear-gradient
-  (to bottom, #f5f5f5, $white 9%);
+  background-image: linear-gradient(to bottom, $beige, $white 9%);
   &__share {    
     padding-bottom: 30px;
-    border-bottom: 1px solid #d8d8d8;
+    border-bottom: 1px solid $white-two;
     display: flex;
     flex-direction: column;
     .create-intro {
@@ -14,10 +13,10 @@
       justify-content: space-between;
       .title {
         margin: 0;
-        font-family: 'Open Sans', sans-serif;
+        font-family: $OpenSans;
         font-size: 18px;
         font-weight: 600;
-        color: #54585a;
+        color: $gunmetal;
         text-transform: uppercase;
       }
       .logo {
@@ -25,7 +24,7 @@
       }
       .arrow-button {
         font-size: 18px;
-        color: #54585a;
+        color: $gunmetal;
       }
     }
     .create-button {
@@ -36,8 +35,8 @@
       background-color: $orange;
       border: none;
       border-radius: 12px;
-      box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
-      font-family: 'Open Sans', sans-serif;
+      box-shadow: 0 1px 6px 0 $shadow-button;
+      font-family: $OpenSans;
       font-size: 18px;
       font-weight: 600;
       text-transform: uppercase;
@@ -46,6 +45,60 @@
         margin-right: 12px;
         font-size: 22px;
       }  
+    }
+  }
+  
+  .active-share {
+      display: none;
+    }
+  &__share-two {
+    padding: 20px 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid $white-two;
+    .title-share {
+      margin: 0;
+      text-align: center;
+      font-family: $OpenSans;
+      font-size: 18px;
+      font-weight: 600;
+      color: $gunmetal;
+      span {
+        text-transform: capitalize;
+      }
+    }
+    .link-share {
+      text-align: center;
+      color: $orange;
+      border-radius: 3px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: 'Open Sans', sans-serif;
+      margin-top: 5px;
+      
+    }
+    .create-button-two {
+      padding: 0;
+      width: 181px;
+      height: 30px;
+      margin: auto;
+      margin-top: 10px;
+      background-color: $azure;
+      font-family: $OpenSans;
+      color: $white;
+      border: none;
+      box-shadow: 0 0 4px 0 $shadow-button;
+      font-size: 14px;
+      font-weight: 400;
+      span {
+        text-transform: capitalize;
+      }
+      i {
+        margin-right: 9.5px;
+        font-size: 18px;
+      }
+    
     }
   }
 }
