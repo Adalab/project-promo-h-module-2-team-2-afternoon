@@ -1,17 +1,77 @@
 <div class="content">
-    <section class="preview">
+	<section class="preview">
 
-    </section>
+	</section>
+
+	<section class="create">
+		<div class="create__design">
+		</div>
+		<div class="create__fill">
+
+		</div>
+		<div class="create__share">
+			<div class= "create-intro">
+					<h2 class="title"><i class="logo fas fa-share-alt"></i>comparte</h2>
+				<i class="arrow-button fas fa-chevron-down"></i>
+			</div>
+			<button class="create-button form imput submit" type='submit'><i class="logo-button far fa-address-card"></i>crear tarjeta</button>
 
 
-    <section class="create">
-        <div class="create__design">
-        </div>
-        <div class="create__fill">
+				<!--<button type='submit'>crear tarjeta #f2bc; </button>
+				<input class="form imput submit far fa-address-card" type="submit" value="&#f2bc; crear tarjeta" >
 
-        </div>
-        <div class="create__share">
+				----------------------------------
+				const elementImputUser = document.querySelector('#user-name');
 
-        </div>
-    </section>
+				function x{
+
+					let hasErrors = false; //Las variables booleanas suelen nombrarse con un verbo delante para reconocer facilmente qué es lo que se cumple o no.
+
+					if (elementInputUser.value === ''){
+						hasErrors = true;
+						elementWrapperUser.classList.add('error'); // Clase para poner el borde del botón rojo.
+					}
+
+					if (elementInputEmail.value === ''){
+						hasErrors = true;
+						elementWrapperUser.classList.add('error'); // Clase para poner el borde del botón rojo.
+					}
+					if (hasErrors !== true // hasErrors = false ){
+						alert('Los datos han sido enviados');
+						elementWrapperEmail.classList.remove('error');
+						elementWrapperUser.classList.remove('error');
+					}	
+				}
+			elementButton.addEventListener('click',sendInfo);
+
+
+			----------------------------------------
+
+
+			Para nombre y contraseña:
+
+			const elementUserInput = document.querySelector('#user-name');
+			const elementPasswordInput = document.querySelector('#user-password');
+			const elementButton = document.querySelector('#login-button');
+
+			const userName = 'pixelmary';
+			const userPassword = 'bicicleta';
+
+			const elementErrorWrapper = document.querySelector('error-wrapper');
+
+			function login (){
+				if(elementUserInput.value === userName && elementPasswordInput.value === userPassword) {
+					alert('Estás dentro')
+					elementErrorWrapper.classList.add('hidden');
+				} else {
+					elementErrorWrapper.classList.remove('hidden');
+				}
+			}
+
+			elementButton.addEventListener('click',login);
+
+		-->
+			</div>
+		</div>
+	</section>
 </div>
