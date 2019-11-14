@@ -1,13 +1,22 @@
+.content {
+    width: 100%;
+    margin: 0;
+}
+
+
 .preview {
     background-color: #bfcdd0;
-    padding: rem(20) rem(10);
-    width: 100vw;
-
+    padding: rem(40);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
     &__card {
         background-color: $white;
-        width: rem(240);
-        padding: rem(20) rem(0);
-        margin-top: rem(20);
+        margin-top: rem(30);
+        width: rem(250);
+       
     }
     
     &__button {
@@ -18,32 +27,70 @@
         background: transparent;
         color: #54585a;
         font-size: rem(12);
+        font-family: $OpenSans;
         line-height: rem(20);
         text-transform: uppercase;
     }
 
-    &__title {
+    &__content {
+        border-left: solid 5px $dirtyblue;
+
+        &__title {
         
-        font-family: $titleCard;
-        font-weight: bold;
-        color: $darkblue;
-        font-size: rem(18);
+            font-family: $titleCard;
+            font-weight: 700;
+            color: $darkblue;
+            font-size: rem(18);
+            text-transform: capitalize;
+            margin-left: rem(15);
+            margin-top: rem(25);
+            margin-bottom: rem(4);
+        }
+        &__text {
+            font-family: $titleCard;
+            margin-left: rem(15);
+            color: #54585a;
+            margin-top: 0; 
+           
+        }
+
+
     }
 
-    &__text {
-        font-family: $titleCard;
-    }
+    
+
+    
 
     &__image {
-        
+        width: rem(250);
     }
 }
 
 .fa.fa-trash-o {
     font-size: rem(10);
-    line-height: rem(18);
+    line-height: rem(20);
     color: #54585a;
     margin-right: rem(4);
+}
 
+.fa-mobile-alt {
+    color: $darkblue;
+    font-size: rem(18);
+    margin: rem(20) rem(0);
+    
+}
 
+.fa-envelope {
+    color: $darkblue;
+    font-size: rem(18);
+    margin: rem(10) rem(0);
+}
+
+.icon {
+    border: 2px solid $hospitalgreen;
+    border-radius: 50%;
+    width: rem(20);
+    height: rem(20);
+    padding: rem(10);
+    margin: rem(5);
 }
