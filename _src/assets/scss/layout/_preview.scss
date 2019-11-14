@@ -1,8 +1,49 @@
 .preview {
     background-color: #bfcdd0;
-    padding: rem(20) rem(40);
+    padding: rem(20) rem(10);
+    width: 100vw;
 
     &__card {
         background-color: $white;
-    }    
+        width: rem(240);
+        padding: rem(20) rem(0);
+        margin-top: rem(20);
+    }
+    
+    &__button {
+        border: solid 1px $white;
+        border-radius: rem(15);
+        width: rem(75);
+        height: rem(30);
+        background: transparent;
+        color: #54585a;
+        font-size: rem(12);
+        line-height: rem(20);
+        text-transform: uppercase;
+    }
+
+    &__title {
+        
+        font-family: $titleCard;
+        font-weight: bold;
+        color: $darkblue;
+        font-size: rem(18);
+    }
+
+    &__text {
+        font-family: $titleCard;
+    }
+
+    &__image {
+        
+    }
+}
+
+.fa.fa-trash-o {
+    font-size: rem(10);
+    line-height: rem(18);
+    color: #54585a;
+    margin-right: rem(4);
+
+
 }
