@@ -1,0 +1,56 @@
+.fill__form {
+    padding: 15px 20px;
+}
+
+.fill__title{
+    text-transform: uppercase;
+    font-size: rem(18);
+    padding: 10px 20px;
+}
+
+.fill__label{
+    display: block;
+    font-size: rem(14);
+    margin-bottom: 7px;
+    color: $darkblue;
+}
+
+.fill__input {
+    display: block;
+    font-size: rem(14);
+    border: 1px solid $hospitalgreen;
+    margin-bottom: 20px;
+    padding: 7px 9px;
+    color: $darkblue;
+    &::placeholder{
+        color: $pinkishgrey;
+    }
+}
+
+.fill__input-file {
+    display: none;
+}
+
+.fill__file-picker-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.fill__button {
+    background-color: $orange;
+    box-shadow: 0 0 4px 0 $shadow-button;
+    border-radius: 3px;
+    color: $white;
+    font-size: rem(14);
+    padding: 7px 22px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.fill__image-preview {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid $hospitalgreen;
+    margin-left: 20px;
+}
