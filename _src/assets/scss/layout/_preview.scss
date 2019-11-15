@@ -56,9 +56,6 @@
 
 
     }
-
-    
-
     
 
     &__image {
@@ -66,31 +63,35 @@
     }
 }
 
-.fa.fa-trash-o {
+.fa-trash-o {
     font-size: rem(10);
     line-height: rem(20);
     color: #54585a;
     margin-right: rem(4);
-}
-
-.fa-mobile-alt {
-    color: $darkblue;
-    font-size: rem(18);
-    margin: rem(20) rem(0);
+    
     
 }
 
-.fa-envelope {
-    color: $darkblue;
-    font-size: rem(18);
-    margin: rem(10) rem(0);
+//**SOCIAL ICONS**//
+
+.preview__icons {
+    margin-left: 20px;
+    padding: 20 0;
 }
+
 
 .icon {
     border: 2px solid $hospitalgreen;
     border-radius: 50%;
-    width: rem(20);
-    height: rem(20);
-    padding: rem(10);
-    margin: rem(5);
+    color: $darkblue;
+    font-size: rem(12);
+    margin: rem(40) rem(0); 
+    text-align: center;
+    padding: 5px;
 }
+
+
+
+
+
+
