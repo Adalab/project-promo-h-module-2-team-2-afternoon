@@ -1,11 +1,35 @@
+.fill__header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $gunmetal;
+}
+
+.fill__header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
 .fill__form {
     padding: 15px 20px;
 }
 
 .fill__title{
     text-transform: uppercase;
+    font-family: $OpenSans;
+    font-weight: 600;
     font-size: rem(18);
-    padding: 10px 20px;
+    margin: 0;
+    margin-left: 9px;
+}
+
+.fa-keyboard {
+    color: $orange;
+}
+
+.fa-chevron-down {
+    margin-right: 20px;
 }
 
 .fill__label{
@@ -13,6 +37,7 @@
     font-size: rem(14);
     margin-bottom: 7px;
     color: $darkblue;
+    font-family: $OpenSans;
 }
 
 .fill__input {
@@ -22,6 +47,7 @@
     margin-bottom: 20px;
     padding: 7px 9px;
     color: $darkblue;
+    font-family: $OpenSans;
     &::placeholder{
         color: $pinkishgrey;
     }
@@ -42,6 +68,7 @@
     border-radius: 3px;
     color: $white;
     font-size: rem(14);
+    font-family: $OpenSans;
     padding: 7px 22px;
     border: none;
     margin-bottom: 20px;
