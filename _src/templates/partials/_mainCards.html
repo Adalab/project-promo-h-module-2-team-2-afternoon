@@ -6,29 +6,37 @@
 
     <section class="create">
         <div class="create__design">
-            <div>
-                <div class="create__design--icon"></span>
-                <h2 class="create__design--title">Diseña</span>
+            <div class="design-view">
+                <div class="view-left">
+                    <span class=create__design--icon><i class="far fa-object-ungroup"></i></span>
+                    <h2 class="create__design--title">Diseña</h2>
+                </div>
+                <div class="create__design--arrow">
+                    <span><i class="fas fa-chevron-down"></i></span>
+                    <span><i class="fas fa-chevron-up"></i></span>
+                </div>
             </div>
-            <span class="create__design--text">Colores</span>
-            <div class="create__design--form">
-                <input id="COLORES" type="checkbox" value="mixblue" name="COLORES">
-                <div class="colormix">
-                    <span class="colormix__darkblue"></span>
-                    <span class="colormix__blue"></span>
-                    <span class="colormix__acqua"></span>
-                </div>
-                <input id="COLORES" type="checkbox" value="mixred" name="COLORES">
-                <div class="colormix">
-                    <span class="colormix__darkred"></span>
-                    <span class="colormix__red"></span>
-                    <span class="colormix__orange"></span>
-                </div>
-                <input id="COLORES" type="checkbox" value="mix" name="COLORES">
-                <div class="colormix">
-                    <span class="colormix__metalblue"></span>
-                    <span class="colormix__yellow"></span>
-                    <span class="colormix__lightgrey"></span>
+            <div class="view-hidden">
+                <span class="create__design--text">Colores</span>
+                <div class="create__design--form">
+                    <div class="colormix">
+                        <input class="colors" id="COLORES" type="checkbox" value="mixblue" name="COLORES">
+                        <div class="colormix__darkblue"></div>
+                        <div class="colormix__blue"></div>
+                        <div class="colormix__acqua"></div>
+                    </div>
+                    <div class="colormix">
+                        <input class="colors" id="COLORES" type="checkbox" value="mixred" name="COLORES">
+                        <div class="colormix__darkred"></div>
+                        <div class="colormix__red"></div>
+                        <div class="colormix__orange"></div>
+                    </div>
+                    <div class="colormix">
+                        <input class="colors" id="COLORES" type="checkbox" value="mix" name="COLORES">
+                        <div class="colormix__metalblue"></div>
+                        <div class="colormix__yellow"></div>
+                        <div class="colormix__lightgrey"></div>
+                    </div>
                 </div>
             </div>
         </div>
