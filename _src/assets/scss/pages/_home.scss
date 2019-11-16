@@ -27,6 +27,7 @@
             width: rem(419);
             height: rem(105);
             margin-bottom: rem(31);
+            margin-top: auto;
 
         }
 
@@ -76,12 +77,13 @@
         width: 100%;
         height: rem(73.8);
         max-width: rem(215);
-        border: 1px solid $orange;
+        border: 2px solid rgba(225, 15, 52, 0.21);
         border-radius: 4px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        padding-top: 10px;
+        padding-top: 13px;
+        
         
 
         @media all  and (min-width:768px){
@@ -111,6 +113,7 @@
     &__text{
         color: #54585a;
         font-size: rem(12.8);
+        margin: rem(0);
 
         @media all  and (min-width:768px){
 
@@ -130,13 +133,15 @@
     background-color:$darkblue;
     margin-top: rem(38.6);
 
-    
+    @media all  and (min-width:768px){
+
+        margin-bottom: rem(59);
+    }
  
 }
 
 .first__button{
     color: $white;
     text-transform: uppercase;
-
-    
+   
 }
