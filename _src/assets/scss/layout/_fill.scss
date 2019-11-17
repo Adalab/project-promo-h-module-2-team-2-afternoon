@@ -1,83 +1,88 @@
-.fill__header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: $gunmetal;
-}
+.create__fill {
+	border-bottom: 1px solid $white-two;
+	padding-bottom: 10px;
 
-.fill__header {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-}
+	.fill__header-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: $gunmetal;
+		padding: 10px 0 25px;
+		text-transform: uppercase;
+		font-size: rem(18);
+		.fill__header {
+			display: flex;
+			align-items: center;
+			.fill__title{
+				text-transform: uppercase;
+				font-family: $OpenSans;
+				font-weight: 600;
+				font-size: rem(18);
+				margin: 0;
+				margin-left: 9px;
+			}
+			.fa-keyboard {
+				color: $orange;
+			}
+		}
+	}
+	
 
-.fill__form {
-    padding: 15px 20px;
-}
+	.fill__form {
+		margin-bottom: 20px;
 
-.fill__title{
-    text-transform: uppercase;
-    font-family: $OpenSans;
-    font-weight: 600;
-    font-size: rem(18);
-    margin: 0;
-    margin-left: 9px;
-}
+		.fa-keyboard {
+			color: $orange;
+		}
+		.fa-chevron-down {
+			margin-right: 20px;
+		}
+		.fill__label{
+			display: block;
+			font-size: rem(14);
+			margin-bottom: 7px;
+			color: $darkblue;
+			font-family: $OpenSans;
+		}
+		.fill__input {
+			display: block;
+			font-size: rem(14);
+			border: 1px solid $hospitalgreen;
+			margin-bottom: 20px;
+			padding: 7px 9px;
+			color: $darkblue;
+			font-family: $OpenSans;
+			&::placeholder{
+				color: $pinkishgrey;
+			}
+		}
+		.fill__input-file {
+			display: none;
+		}
 
-.fa-keyboard {
-    color: $orange;
-}
+		.fill__file-picker-wrapper {
+			display: flex;
+			align-items: flex-start;
+		}
 
-.fa-chevron-down {
-    margin-right: 20px;
-}
+		.fill__button {
+			background-color: $orange;
+			box-shadow: 0 0 4px 0 $shadow-button;
+			border-radius: 3px;
+			color: $white;
+			font-size: rem(14);
+			font-family: $OpenSans;
+			padding: 7px 22px;
+			border: none;
+			margin-bottom: 20px;
+		}
 
-.fill__label{
-    display: block;
-    font-size: rem(14);
-    margin-bottom: 7px;
-    color: $darkblue;
-    font-family: $OpenSans;
-}
-
-.fill__input {
-    display: block;
-    font-size: rem(14);
-    border: 1px solid $hospitalgreen;
-    margin-bottom: 20px;
-    padding: 7px 9px;
-    color: $darkblue;
-    font-family: $OpenSans;
-    &::placeholder{
-        color: $pinkishgrey;
-    }
-}
-
-.fill__input-file {
-    display: none;
-}
-
-.fill__file-picker-wrapper {
-    display: flex;
-    align-items: flex-start;
-}
-
-.fill__button {
-    background-color: $orange;
-    box-shadow: 0 0 4px 0 $shadow-button;
-    border-radius: 3px;
-    color: $white;
-    font-size: rem(14);
-    font-family: $OpenSans;
-    padding: 7px 22px;
-    border: none;
-    margin-bottom: 20px;
-}
-
-.fill__image-preview {
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    border: 1px solid $hospitalgreen;
-    margin-left: 20px;
+		.fill__image-preview {
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+			border: 1px solid $hospitalgreen;
+			margin-left: 20px;
+		}
+	}
 }

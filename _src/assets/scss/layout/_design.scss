@@ -1,17 +1,14 @@
-.content {
-    width: 320px;
-}
-
 .create{
     padding: rem(20);
+    padding-bottom: 0;
     padding-top: rem(27);
     font-family: 'OpenSans', Arial;
     color: $gunmetal;
-    
+
     &__design {
         text-transform: uppercase;
-        height: rem(224);
-
+        padding-bottom: rem(10);
+        border-bottom: 1px solid $white-two;
         &--icon{
             color: $tomato;
             width: rem(21);
@@ -21,16 +18,17 @@
         &--title {
             font-size: rem(18);
             margin: rem(0) rem(0) rem(0) rem(10);
+            font-weight: 600;
         }
         &--arrow {
             width: rem(16);
             height: rem(18);
             color: $gunmetal;
+            font-size: rem(18);
         }
         &--text {
             margin: rem(73) rem(219) rem(132) rem(19);
             font-size: rem(14);
-            position: absolute;
             top: 5px;    
         }
         // &--form {
@@ -48,11 +46,10 @@
 .view-left {
     display: flex;
     flex-direction: row;
-    margin-bottom: rem(25);
 }
 
 .view-hidden{
-    margin: rem(20) rem(0) rem(20) rem(0);
+    margin: rem(22) rem(0) rem(20) rem(0);
 }
 
 .color__one, .color__two, .color__three{
