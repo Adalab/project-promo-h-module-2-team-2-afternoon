@@ -39,3 +39,20 @@ function changeArrow () {
   }
 }
 arrow.addEventListener('click',changeArrow);
+
+
+
+
+
+// TOOGLE PALETA COLORES - falta
+const div =  document.querySelector("#js-toogle");
+const elementHidden = document.querySelector('#toogle');
+
+
+function toogle () {
+  if (elementHidden.classList.contains('hidden')) {
+    elementHidden.classList.remove('hidden'); 
+  }
+}
+div.addEventListener('click', toogle);
+

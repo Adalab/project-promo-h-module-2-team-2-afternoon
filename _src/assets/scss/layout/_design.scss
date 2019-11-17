@@ -19,6 +19,8 @@
             font-size: rem(18);
             margin: rem(0) rem(0) rem(0) rem(10);
             font-weight: 600;
+            font-family: "Open Sans", sans-serif;
+    
         }
         &--arrow {
             width: rem(16);
@@ -50,6 +52,15 @@
 
 .view-hidden{
     margin: rem(22) rem(0) rem(20) rem(0);
+
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    text-decoration: none;
 }
 
 .color__one, .color__two, .color__three{
