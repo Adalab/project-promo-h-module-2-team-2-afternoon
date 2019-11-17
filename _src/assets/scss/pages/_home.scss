@@ -127,54 +127,40 @@
 }
 
 /*MEDIA QUERIES*/
-/*
 @media all  and (min-width:768px) {
 
 	.main {
-		max-height:90vh;
 
 		&__photo {
-			width: rem(419);
-			height: rem(105);
-			margin-bottom: rem(31);
-			margin-top: auto;
+			
 
 		}
 
 		&__section {
 	
-			max-width: rem(403);
-			margin-bottom: rem(27);
 		}
 
 		&__title {
 
-			font-size: rem(28);
 		}
 
 		&__text {
 
-			font-size: rem(16);
 		}
 
 		&__symbols {
 
-			max-width: rem(403);
-			margin-bottom: rem(186); 
 		}
 	}
 	.symbols {
 		
-		font-size: rem(28);
 
 		&__text {
-			font-size: rem(16);
 		}
 		&__button{
-			margin-bottom: rem(59);
 
 		}
 	}
 			
 	
-} */
+}
