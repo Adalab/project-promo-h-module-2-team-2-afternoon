@@ -1,0 +1,17 @@
+.header{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: rem(30);
+	margin-top: rem(30);
+}
+
+.header__photo{
+	width: rem(201);
+	height: rem(50);
+	background: url(../images/profile.svg);
+	background-size: cover;
+	background-position: center;
+}

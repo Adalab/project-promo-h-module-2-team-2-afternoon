@@ -1,0 +1,30 @@
+.footer{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: rem(18);
+	padding-bottom: rem(20);
+	@media all  and (min-width:768px){
+		flex-direction: row;
+		justify-content: space-between;
+		align-content: center;
+		padding: rem(20) rem(40);
+	}
+	&__text{
+		color: $brownish-grey;
+		font-family: $OpenSans;
+		font-size: rem(14);
+	}
+	&__logo{
+		width: rem(103);
+		height: rem(40);
+		background: url(../images/logo-adalab.png);
+		background-position: center;
+		background-size: cover;
+		margin-top: rem(12);
+		@media all  and (min-width:768px){
+			margin-bottom: rem(0);                      
+		}        
+	}
+}
