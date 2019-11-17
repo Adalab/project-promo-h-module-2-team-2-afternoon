@@ -6,10 +6,10 @@
     padding: rem(20);
     padding-top: rem(27);
     font-family: 'OpenSans', Arial;
-    text-transform: uppercase;
     color: $gunmetal;
     
     &__design {
+        text-transform: uppercase;
         height: rem(224);
 
         &--icon{

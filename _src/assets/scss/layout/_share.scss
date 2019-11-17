@@ -2,48 +2,48 @@
   padding: 27px 23px 30px;
   background-image: linear-gradient(to bottom, $beige, $white 9%);
   &__share {    
-    padding-bottom: 30px;
+    padding-bottom: rem(30);
     border-bottom: 1px solid $white-two;
     display: flex;
     flex-direction: column;
     .create-intro {
-      margin-top: 10px;
+      margin-top: rem(10);
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       .title {
         margin: 0;
         font-family: $OpenSans;
-        font-size: 18px;
+        font-size: rem(18);
         font-weight: 600;
         color: $gunmetal;
         text-transform: uppercase;
       }
       .logo {
-        margin-right: 12px;
+        margin-right: rem(12);
       }
       .arrow-button {
-        font-size: 18px;
+        font-size: rem(18);
         color: $gunmetal;
       }
     }
     .create-button {
-      width: 199px;
-      height: 50px;
+      width: rem(199);
+      height: rem(50);
       margin: auto;
-      margin-top: 30px;
+      margin-top: rem(30);
       background-color: $orange;
       border: none;
-      border-radius: 12px;
+      border-radius: rem(12);
       box-shadow: 0 1px 6px 0 $shadow-button;
       font-family: $OpenSans;
-      font-size: 18px;
+      font-size: rem(18);
       font-weight: 600;
       text-transform: uppercase;
       color: $white;
       .fa-address-card {
-        margin-right: 12px;
-        font-size: 22px;
+        margin-right: rem(12);
+        font-size: rem(22);
       }  
     }
   }
@@ -61,7 +61,7 @@
       margin: 0;
       text-align: center;
       font-family: $OpenSans;
-      font-size: 18px;
+      font-size: rem(18);
       font-weight: 600;
       color: $gunmetal;
       span {
@@ -71,34 +71,34 @@
     .link-share {
       text-align: center;
       color: $orange;
-      border-radius: 3px;
-      font-size: 12px;
+      border-radius: rem(3);
+      font-size: rem(12);
       font-weight: 600;
       font-family: 'Open Sans', sans-serif;
-      margin-top: 5px;
+      margin-top: rem(5);
       
     }
     .create-button-two {
       padding: 0;
-      width: 181px;
-      height: 30px;
+      width: rem(181);
+      height: rem(30);
       margin: auto;
-      margin-top: 10px;
+      margin-top: rem(10);
       background-color: $azure;
       font-family: $OpenSans;
       color: $white;
       border: none;
       box-shadow: 0 0 4px 0 $shadow-button;
-      font-size: 14px;
+      font-size: rem(14);
       font-weight: 400;
+      text-transform: lowercase;
       span {
         text-transform: capitalize;
       }
       .fa-twitter {
-        margin-right: 9.5px;
-        font-size: 18px;
+        margin-right: rem(9.5);
+        font-size: rem(18);
       }
-    
     }
   }
 }
