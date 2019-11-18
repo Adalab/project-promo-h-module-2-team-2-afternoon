@@ -1,17 +1,24 @@
-a
-a:link {
-    text-decoration: none;
-  }
 
 .content {
     width: 100%;
     margin: 0;
+    background-image: linear-gradient(to bottom, $beige, $white 9%);
+   
+    
+
+    @include media ($tablet) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: rem(15);
+    }
+ 
 }
 
 
 .preview {
 
-    background-color: #bfcdd0;
     padding: rem(40);
     display: flex;
     flex-direction: column;
@@ -20,6 +27,7 @@ a:link {
     background: #bfcdd0;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #dde9ed, #bfcdd0);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #dde9ed, #bfcdd0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
     
     
@@ -127,6 +135,17 @@ a:link {
     }
    
 }
+
+
+@include media ($tablet){
+    .preview {
+        height: 100vh;
+        width: 100vw;
+        border-radius: 2px;
+    }
+}
+    
+
 
 
 
