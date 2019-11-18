@@ -138,11 +138,25 @@
 
 
 @include media ($tablet){
+    .content {
+        padding: 23px 40px 21px;
+    }
+    .content-preview {
+        width: 100%;
+        max-width: 329px;
+    }
     .preview {
         height: 100vh;
-        width: 100vw;
         border-radius: 2px;
     }
+    .content-create {
+        width: 100%;
+        max-width: 329px;
+    }
+    .create {
+        padding: 7px 30px 30px 0;
+    }
+
 }
     
 
