@@ -17,8 +17,9 @@
 }
 
 
-.preview {
 
+.preview {
+    
     padding: rem(40);
     display: flex;
     flex-direction: column;
@@ -140,7 +141,8 @@
 @include media ($tablet){
     .preview {
         height: 100vh;
-        width: 100vw;
+        width: 100%;
+        max-width: rem(329);
         border-radius: 2px;
     }
 }
