@@ -5,6 +5,7 @@
 	align-items: center;
 	padding-top: rem(18);
 	padding-bottom: rem(20);
+	border: rem(1) solid $white-two;
 	@media all  and (min-width:768px){
 		flex-direction: row;
 		justify-content: space-between;
