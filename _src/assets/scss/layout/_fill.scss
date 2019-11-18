@@ -1,13 +1,13 @@
 .create__fill {
-	border-bottom: 1px solid $white-two;
-	padding-bottom: 10px;
+	border-bottom: rem(1) solid $white-two;
+	padding-bottom: rem(10);
 
 	.fill__header-container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		color: $gunmetal;
-		padding: 10px 0 25px;
+		padding: rem(10) rem(0) rem(25);
 		text-transform: uppercase;
 		font-size: rem(18);
 		.fill__header {
@@ -19,7 +19,7 @@
 				font-weight: 600;
 				font-size: rem(18);
 				margin: 0;
-				margin-left: 9px;
+				margin-left: rem(9);
 			}
 			.fa-keyboard {
 				color: $orange;
@@ -29,27 +29,27 @@
 	
 
 	.fill__form {
-		margin-bottom: 20px;
+		margin-bottom: rem(20);
 
 		.fa-keyboard {
 			color: $orange;
 		}
 		.fa-chevron-down {
-			margin-right: 20px;
+			margin-right: rem(20);
 		}
 		.fill__label{
 			display: block;
 			font-size: rem(14);
-			margin-bottom: 7px;
+			margin-bottom: rem(7);
 			color: $darkblue;
 			font-family: $OpenSans;
 		}
 		.fill__input {
 			display: block;
 			font-size: rem(14);
-			border: 1px solid $hospitalgreen;
-			margin-bottom: 20px;
-			padding: 7px 9px;
+			border: rem(1) solid $hospitalgreen;
+			margin-bottom: rem(20);
+			padding: rem(7) rem(9);
 			color: $darkblue;
 			font-family: $OpenSans;
 			&::placeholder{
@@ -67,22 +67,22 @@
 
 		.fill__button {
 			background-color: $orange;
-			box-shadow: 0 0 4px 0 $shadow-button;
-			border-radius: 3px;
+			box-shadow: 0 0 rem(4) 0 $shadow-button;
+			border-radius: rem(3);
 			color: $white;
 			font-size: rem(14);
 			font-family: $OpenSans;
-			padding: 7px 22px;
+			padding: rem(7) rem(22);
 			border: none;
-			margin-bottom: 20px;
+			margin-bottom: rem(20);
 		}
 
 		.fill__image-preview {
-			width: 30px;
-			height: 30px;
+			width: rem(30);
+			height: rem(30);
 			display: inline-block;
-			border: 1px solid $hospitalgreen;
-			margin-left: 20px;
+			border: rem(1) solid $hospitalgreen;
+			margin-left: rem(20);
 		}
 	}
 }

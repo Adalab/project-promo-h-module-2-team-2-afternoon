@@ -1,9 +1,9 @@
 .create {
-  padding: 27px 23px 0;
+  padding: rem(27) rem(23) 0;
   /*background-image: linear-gradient(to bottom, $beige, $white 9%);*/
   &__share {    
     padding-bottom: rem(30);
-    border-bottom: 1px solid $white-two;
+    border-bottom: rem(1) solid $white-two;
     display: flex;
     flex-direction: column;
     .create-intro {
@@ -20,6 +20,7 @@
         text-transform: uppercase;
       }
       .logo {
+        color: $orange;
         margin-right: rem(12);
       }
       .arrow-button {
@@ -35,7 +36,7 @@
       background-color: $orange;
       border: none;
       border-radius: rem(12);
-      box-shadow: 0 1px 6px 0 $shadow-button;
+      box-shadow: 0 rem(1) rem(6) 0 $shadow-button;
       font-family: $OpenSans;
       font-size: rem(18);
       font-weight: 600;
@@ -52,11 +53,11 @@
       display: none;
     }
   &__share-two {
-    padding: 20px 0 30px;
+    padding: rem(20) 0 rem(30);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-bottom: 1px solid $white-two;
+    border-bottom: rem(1) solid $white-two;
     .title-share {
       margin: 0;
       text-align: center;
