@@ -8,7 +8,7 @@
     &__design {
         text-transform: uppercase;
         padding-bottom: rem(10);
-        border-bottom: 1px solid $white-two;
+        border-bottom: rem(1) solid $white-two;
         &--icon{
             color: $tomato;
             width: rem(21);
@@ -31,7 +31,7 @@
         &--text {
             margin: rem(73) rem(219) rem(132) rem(19);
             font-size: rem(14);
-            top: 5px;    
+            top: rem(5);    
         }
         // &--form {
         //     display: flex;

@@ -17,8 +17,9 @@
 }
 
 
-.preview {
 
+.preview {
+    
     padding: rem(40);
     display: flex;
     flex-direction: column;
@@ -43,7 +44,7 @@
     }
     
     &__button {
-        border: solid 1px $white;
+        border: solid rem(1) $white;
         border-radius: rem(15);
         width: rem(75);
         height: rem(30);
@@ -58,7 +59,7 @@
     }
 
     &__content {
-        border-left: solid 5px $dirtyblue;
+        border-left: solid rem(5) $dirtyblue;
 
         &__title {
         
@@ -96,8 +97,8 @@
 //**SOCIAL ICONS**//
 
 .preview__icons {
-    margin-left: 18px;
-    padding: 17 0 19;
+    margin-left: rem(18);
+    padding: rem(17) rem(0) rem(19);
     
 }
 
@@ -107,28 +108,28 @@
     font-size: rem(18);
     margin: rem(40) rem(0); 
     text-align: center;
-    padding: 2px;
+    padding: rem(2);
 
     &--1{
-        border: 2px solid $hospitalgreen;
+        border: rem(2) solid $hospitalgreen;
         border-radius: 50%;
         padding: rem(5) rem(9);
         color: $darkblue;
     }
     &--2{
-        border: 2px solid $hospitalgreen;
+        border: rem(2) solid $hospitalgreen;
         border-radius: 50%;
         padding: rem(5) rem(6);
         color: $darkblue;
     }
     &--3{
-        border: 2px solid $hospitalgreen;
+        border: rem(2) solid $hospitalgreen;
         border-radius: 50%;
         padding: rem(5) rem(7);
         color: $darkblue;
     }
     &--4{
-        border: 2px solid $hospitalgreen;
+        border: rem(2) solid $hospitalgreen;
         border-radius: 50%;
         padding: rem(5) rem(7);
         color: $darkblue;
@@ -139,23 +140,24 @@
 
 @include media ($tablet){
     .content {
-        padding: 23px 40px 21px;
+        padding: rem(23) rem(40) rem(21);
     }
     .content-preview {
         width: 100%;
-        max-width: 329px;
+        max-width: rem(329);
     }
     .preview {
         height: 100vh;
-        border-radius: 2px;
+        border-radius: rem(2);
     }
     .content-create {
         width: 100%;
-        max-width: 329px;
+        max-width: rem(329);
     }
     .create {
-        margin: 7px 30px 30px 0;
-        padding: 0;
+        padding: 7px 30px 30px 0;
+        margin: rem(7) rem(30) rem(30) rem(0);
+        padding: rem(0);
     }
 
 }
