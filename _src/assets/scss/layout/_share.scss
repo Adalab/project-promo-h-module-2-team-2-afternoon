@@ -2,7 +2,7 @@
   padding: rem(27) rem(23) 0;
   /*background-image: linear-gradient(to bottom, $beige, $white 9%);*/
   &__share {    
-    padding-bottom: rem(30);
+    padding-bottom: rem(7);
     border-bottom: rem(1) solid $white-two;
     display: flex;
     flex-direction: column;
@@ -33,6 +33,7 @@
       height: rem(50);
       margin: auto;
       margin-top: rem(30);
+      margin-bottom: rem(23);
       background-color: $orange;
       border: none;
       border-radius: rem(12);
@@ -100,6 +101,12 @@
         margin-right: rem(9.5);
         font-size: rem(18);
       }
+    }
+    .hidden {
+      display: none;
+    }
+    .noPadding {
+      padding-bottom: 7px;
     }
   }
 }
