@@ -66,3 +66,83 @@ function removeClass () {
   shareCard.classList.remove('active-share');
 }
 getElement.addEventListener('click',removeClass);
+
+
+//Cambiar colores en preview
+const name = document.querySelector('.preview__content__title');
+const contentBorder = document.querySelector('.preview__content');
+const iconOne = document.querySelector('.icon--1');
+const iconTwo = document.querySelector('.icon--2');
+const iconThree = document.querySelector('.icon--3');
+const iconFour = document.querySelector('.icon--4');
+//const icons = document.querySelectorAll('.icon--4' + '.icon--3');
+//First color option
+const firstColors = document.getElementById('color-one-selected');
+
+function changeColorOne() {
+  //for (var i=0; i<icons.length; i++) {
+    // Ejecutar acciones sobre el nodo listaNodosOperadores[i].
+
+  //nombre y apellidos
+  name.style.color = '$darkblue';
+  //borde nombre y apellidos
+  contentBorder.style.borderColor = '$dirtyblue';
+  //iconos
+  iconOne.style.color = '$darkblue';
+  iconTwo.style.color = '$darkblue';
+  iconThree.style.color = '$darkblue';
+  iconFour.style.color = '$darkblue';
+  /*icons.style.color = '#fff';*/
+  //borde iconos
+  iconOne.style.borderColor = '$hospitalgreen';
+  iconTwo.style.borderColor = '$hospitalgreen';
+  iconThree.style.borderColor = '$hospitalgreen';
+  iconFour.style.borderColor = '$hospitalgreen';
+  
+}
+
+firstColors.addEventListener('click', changeColorOne);
+
+//second color option 
+const secondColors = document.getElementById('color-two-selected');
+
+function changeColorTwo() {
+  //nombre y apellidos
+  name.style.color = '$driedBlood';
+  //borde nombre y apellidos
+  contentBorder.style.borderColor = '$rustyRed';
+  //iconos
+  iconOne.style.color = '$driedBlood';
+  iconTwo.style.color = '$driedBlood';
+  iconThree.style.color = '$driedBlood';
+  iconFour.style.color = '$driedBlood';
+  //borde iconos
+  iconOne.style.borderColor = '$tomato';
+  iconTwo.style.borderColor = '$tomato';
+  iconThree.style.borderColor = '$tomato';
+  iconFour.style.borderColor = '$tomato';
+}
+
+secondColors.addEventListener('click', changeColorTwo);
+
+//third color option 
+const thirdColors = document.getElementById('color-three-selected');
+
+function changeColorThree() {
+  //nombre y apellidos
+  name.style.color = '$slateBlue';
+  //borde nombre y apellidos
+  contentBorder.style.borderColor = '$fadedOrange';
+  //iconos
+  iconOne.style.color = '$slateBlue';
+  iconTwo.style.color = '$slateBlue';
+  iconThree.style.color = '$slateBlue';
+  iconFour.style.color = '$slateBlue';
+  //borde iconos
+  iconOne.style.borderColor = '$lightGreyBlue';
+  iconTwo.style.borderColor = '$lightGreyBlue';
+  iconThree.style.borderColor = '$lightGreyBlue';
+  iconFour.style.borderColor = '$lightGreyBlue';
+}
+
+thirdColors.addEventListener('click', changeColorThree);
