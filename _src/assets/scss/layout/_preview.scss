@@ -1,166 +1,166 @@
 
 .content {
-    width: 100%;
-    margin: 0;
-    background-image: linear-gradient(to bottom, $beige, $white 9%);
+	width: 100%;
+	margin: 0;
+	background-image: linear-gradient(to bottom, $beige, $white 9%);
    
-    
+	
 
-    @include media ($tablet) {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-        align-items: flex-start;
-        padding: rem(15);
-    }
+	@include media ($tablet) {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		align-items: flex-start;
+		padding: rem(15);
+	}
  
 }
 
 
 
 .preview {
-    
-    padding: rem(40);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    background: #bfcdd0;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #dde9ed, #bfcdd0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #dde9ed, #bfcdd0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+	padding: rem(40);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	background: #bfcdd0;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #dde9ed, #bfcdd0);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #dde9ed, #bfcdd0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
-    
-    
-    &__card {
-        background-color: $white;
-        margin-top: rem(20);
-        width: rem(250);
-        border-radius: rem(2);
-        -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.25);
-        -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.25);
-        box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.25);
-       
-    }
-    
-    &__button {
-        border: solid rem(1) $white;
-        border-radius: rem(15);
-        width: rem(75);
-        height: rem(30);
-        background: transparent;
-        color: #54585a;
-        font-size: rem(10);
-        font-family: $OpenSans;
-        line-height: rem(20);
-        text-transform: uppercase;
+	
+	
+	&__card {
+		background-color: $white;
+		margin-top: rem(20);
+		width: rem(250);
+		border-radius: rem(2);
+		-webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.25);
+		-moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.25);
+		box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.25);
+	   
+	}
+	
+	&__button {
+		border: solid rem(1) $white;
+		border-radius: rem(15);
+		width: rem(75);
+		height: rem(30);
+		background: transparent;
+		color: #54585a;
+		font-size: rem(10);
+		font-family: $OpenSans;
+		line-height: rem(20);
+		text-transform: uppercase;
 
-       
-    }
+	   
+	}
 
-    &__content {
-        border-left: solid rem(5) $dirtyblue;
+	&__content {
+		border-left: solid rem(5) $dirtyblue;
 
-        &__title {
-        
-            font-family: $titleCard;
-            font-weight: 700;
-            color: $darkblue;
-            font-size: rem(18);
-            text-transform: capitalize;
-            margin-left: rem(15);
-            margin-top: rem(21);
-            margin-bottom: rem(4);
-        }
-        &__text {
-            font-family: $titleCard;
-            margin-left: rem(15);
-            color: #54585a;
-            margin-top: 0; 
-            margin-bottom: rem(10);
-        }
-    }
-    
-    &__image {
-        width: rem(250);
-    }
+		&__title {
+		
+			font-family: $titleCard;
+			font-weight: 700;
+			color: $darkblue;
+			font-size: rem(18);
+			text-transform: capitalize;
+			margin-left: rem(15);
+			margin-top: rem(21);
+			margin-bottom: rem(4);
+		}
+		&__text {
+			font-family: $titleCard;
+			margin-left: rem(15);
+			color: #54585a;
+			margin-top: 0; 
+			margin-bottom: rem(10);
+		}
+	}
+	
+	&__image {
+		width: rem(250);
+	}
 }
 
 .fa.fa-trash-o.fa-lg {
-    font-size: rem(10);
-    line-height: rem(20);
-    color: #54585a;
-    margin-right: rem(6);
-      
+	font-size: rem(10);
+	line-height: rem(20);
+	color: #54585a;
+	margin-right: rem(6);
+	  
 }
 
 //**SOCIAL ICONS**//
 
 .preview__icons {
-    margin-left: rem(18);
-    padding: rem(17) rem(0) rem(19);
-    
+	margin-left: rem(18);
+	padding: rem(17) rem(0) rem(19);
+	
 }
 
 .icon {
-    
-    color: $darkblue;
-    font-size: rem(18);
-    margin: rem(40) rem(0); 
-    text-align: center;
-    padding: rem(2);
+	
+	color: $darkblue;
+	font-size: rem(18);
+	margin: rem(40) rem(0); 
+	text-align: center;
+	padding: rem(2);
 
-    &--1{
-        border: rem(2) solid $hospitalgreen;
-        border-radius: 50%;
-        padding: rem(5) rem(9);
-        color: $darkblue;
-    }
-    &--2{
-        border: rem(2) solid $hospitalgreen;
-        border-radius: 50%;
-        padding: rem(5) rem(6);
-        color: $darkblue;
-    }
-    &--3{
-        border: rem(2) solid $hospitalgreen;
-        border-radius: 50%;
-        padding: rem(5) rem(7);
-        color: $darkblue;
-    }
-    &--4{
-        border: rem(2) solid $hospitalgreen;
-        border-radius: 50%;
-        padding: rem(5) rem(7);
-        color: $darkblue;
-    }
+	&--1{
+		border: rem(2) solid $hospitalgreen;
+		border-radius: 50%;
+		padding: rem(5) rem(9);
+		color: $darkblue;
+	}
+	&--2{
+		border: rem(2) solid $hospitalgreen;
+		border-radius: 50%;
+		padding: rem(5) rem(6);
+		color: $darkblue;
+	}
+	&--3{
+		border: rem(2) solid $hospitalgreen;
+		border-radius: 50%;
+		padding: rem(5) rem(7);
+		color: $darkblue;
+	}
+	&--4{
+		border: rem(2) solid $hospitalgreen;
+		border-radius: 50%;
+		padding: rem(5) rem(7);
+		color: $darkblue;
+	}
    
 }
 
 
 @include media ($tablet){
-    .content {
-        padding: rem(23) rem(40) rem(21);
-    }
-    .content-preview {
-        width: 100%;
-        max-width: rem(329);
-    }
-    .preview {
-        height: 100vh;
-        border-radius: rem(2);
-    }
-    .content-create {
-        width: 100%;
-        max-width: rem(329);
-    }
-    .create {
-        margin: rem(7) rem(30) rem(30) rem(0);
-        padding: rem(0);
-    }
+	.content {
+		padding: rem(23) rem(40) rem(21);
+	}
+	.content-preview {
+		width: 100%;
+		max-width: rem(585);
+	}
+	.preview {
+		height: 100vh;
+		border-radius: rem(2);
+	}
+	.content-create {
+		width: 100%;
+		max-width: rem(399);
+	}
+	.create {
+		margin: rem(7) rem(30) rem(30) rem(0);
+		padding: rem(0);
+	}
 
 }
-    
+	
 
 
 
