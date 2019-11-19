@@ -1,18 +1,22 @@
 .footer{
 	width: 100%;
-	height: rem(110);
+	height: 9vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	border: rem(1) solid $white-two;
-	@media all  and (min-width:768px){
-		height: rem(60);
+
+	@include media ($tablet) {
+		height: 6vh;
 		flex-direction: row;
 		justify-content: space-between;
 		align-content: center;
 		padding: rem(0) rem(40) rem(0) rem(40);
 		margin-top: 0;
-	}
+
+		@include media ($desktop) {
+			height: 6vh;
+		}
+ 	}
 	&__text{
 		width: rem(198);
 		height: rem(20);
@@ -20,7 +24,7 @@
 		color: $brownish-grey;
 		font-family: $OpenSans;
 		font-size: rem(14);
-		@media all  and (min-width:768px){
+		@include media ($tablet) {
 			margin: rem(18) rem(0) rem(22) rem(0);
 		}    
 	}
@@ -32,7 +36,7 @@
 		&--photo{
 			width: 100%;
 		}
-		@media all  and (min-width:768px){
+		@include media ($tablet) {
 			margin: rem(10) rem(0) rem(10) rem(0);
 		}        
 	}
