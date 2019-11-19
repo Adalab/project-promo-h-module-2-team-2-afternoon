@@ -67,94 +67,73 @@ function removeClass () {
 }
 getElement.addEventListener('click',removeClass);
 
-
-//Cambiar colores en preview
-//---First-Option-----
-const darkblue = '#114e4e';
-const hospitalgreen = '#a2deaf';
-const dirtyblue = '#438792';
-//---Second-Option-----
-const driedBlood = '#420101';
-const tomato = '#e95626';
-const rustyRed = '#bd1010';
-//---Third-Option-----
-const slateBlue = '#3e5b65';
-const fadedOrange = '#eab052';
-const lightGreyBlue = '#a0c0cf';
+//cambiar colores preview
 
 const name = document.querySelector('.preview__content__title');
 const contentBorder = document.querySelector('.preview__content');
-const iconOne = document.querySelector('.icon--1');
-const iconTwo = document.querySelector('.icon--2');
-const iconThree = document.querySelector('.icon--3');
-const iconFour = document.querySelector('.icon--4');
-//const icons = document.querySelectorAll('.icon--4' + '.icon--3');
-//First color option
+const previewElement = document.querySelector('.preview');
 const firstColors = document.getElementById('color-one-selected');
 
-function changeColorOne() {
-  //for (var i=0; i<icons.length; i++) {
-    // Ejecutar acciones sobre el nodo listaNodosOperadores[i].
-
-  //nombre y apellidos
-  name.style.color = darkblue;
-  //borde nombre y apellidos
-  contentBorder.style.borderColor = dirtyblue;
-  //iconos
-  iconOne.style.color = darkblue;
-  iconTwo.style.color = darkblue;
-  iconThree.style.color = darkblue;
-  iconFour.style.color = darkblue;
-  /*icons.style.color = '#fff';*/
-  //borde iconos
-  iconTwo.style.borderColor = hospitalgreen;
-  iconThree.style.borderColor = hospitalgreen;
-  iconFour.style.borderColor = hospitalgreen;
-  
+function changeColorOne () {
+  if(previewElement.classList.contains('red')) {
+    previewElement.classList.remove('red');
+    previewElement.classList.add('blue');
+  } else if(previewElement.classList.contains('yellow')) {
+    previewElement.classList.remove('yellow');
+    previewElement.classList.add('blue');
+  }
 }
 
-firstColors.addEventListener('click', changeColorOne);
+firstColors.addEventListener('click', changeColorOne)
 
-//second color option 
+
 const secondColors = document.getElementById('color-two-selected');
 
-function changeColorTwo() {
-  //nombre y apellidos
-  name.style.color = driedBlood;
-  //borde nombre y apellidos
-  contentBorder.style.borderColor = rustyRed;
-  //iconos
-  iconOne.style.color = driedBlood;
-  iconTwo.style.color = driedBlood;
-  iconThree.style.color = driedBlood;
-  iconFour.style.color = driedBlood;
-  //borde iconos
-  iconOne.style.borderColor = tomato;
-  iconTwo.style.borderColor = tomato;
-  iconThree.style.borderColor = tomato;
-  iconFour.style.borderColor = tomato;
+function changeColorTwo () {
+  if(previewElement.classList.contains('blue')) {
+    previewElement.classList.remove('blue');
+    previewElement.classList.add('red');
+  } else if(previewElement.classList.contains('yellow')) {
+    previewElement.classList.remove('yellow');
+    previewElement.classList.add('red');
+  }
 }
 
-secondColors.addEventListener('click', changeColorTwo);
+secondColors.addEventListener('click', changeColorTwo)
 
-//third color option 
 const thirdColors = document.getElementById('color-three-selected');
 
-function changeColorThree() {
-  //nombre y apellidos
-  name.style.color = slateBlue;
-  //borde nombre y apellidos
-  contentBorder.style.borderColor = fadedOrange;
-  //iconos
-  iconOne.style.color = slateBlue;
-  iconTwo.style.color = slateBlue;
-  iconThree.style.color = slateBlue;
-  iconFour.style.color = slateBlue;
-  //borde iconos
-  iconOne.style.borderColor = lightGreyBlue;
-  iconTwo.style.borderColor = lightGreyBlue;
-  iconThree.style.borderColor = lightGreyBlue;
-  iconFour.style.borderColor = lightGreyBlue;
+function changeColorThree () {
+  if(previewElement.classList.contains('blue')) {
+    previewElement.classList.remove('blue');
+    previewElement.classList.add('yellow');
+  } else if(previewElement.classList.contains('red')) {
+    previewElement.classList.remove('red');
+    previewElement.classList.add('yellow');
+  }
 }
 
 thirdColors.addEventListener('click', changeColorThree);
+
+//boton de reset
+
+/*document.getElementById('reset').click = function() {
+  document.querySelector('.fill__form').value = "";
+};*/
+
+const resetButton = document.getElementById('reset');
+function resetForm() {
+  document.querySelector('.fill__form').reset();
+  document.querySelector('.create__design--form').reset();
+  if(previewElement.classList.contains('blue')) {
+    return;
+  } else if(previewElement.classList.contains('red')) {
+    previewElement.classList.remove('red');
+    previewElement.classList.add('blue');
+  } else if(previewElement.classList.contains('yellow')) {
+    previewElement.classList.remove('yellow');
+    previewElement.classList.add('blue');
+  }
+
+}
+resetButton.addEventListener('click', resetForm);

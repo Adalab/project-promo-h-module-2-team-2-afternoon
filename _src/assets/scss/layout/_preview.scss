@@ -148,6 +148,42 @@
 }
     
 
+.blue {
+	.preview__content {
+		border-color: $dirtyblue;
+		.preview__content__title {
+			color: $darkblue;
+		}
+	}
+	.icon--1, .icon--2, .icon--3, .icon--4 {
+		color: $darkblue;
+		border-color: $hospitalgreen;
+	}
+}
 
+.red {
+	.preview__content {
+		border-color: $rustyRed;
+		.preview__content__title {
+			color: $driedBlood;
+		}
+	}
+	.icon--1, .icon--2, .icon--3, .icon--4 {
+		color: $driedBlood;
+		border-color: $tomato;
+	}
+}
 
+.yellow {
+	.preview__content {
+		border-color: $fadedOrange;
+		.preview__content__title {
+			color: $slateBlue;
+		}
+	}
+	.icon--1, .icon--2, .icon--3, .icon--4 {
+		color: $slateBlue;
+		border-color: $lightGreyBlue;
+	}
+}
 
