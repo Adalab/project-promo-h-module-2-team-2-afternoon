@@ -56,3 +56,47 @@ function toogle () {
 }
 div.addEventListener('click', toogle);
 
+//FORMULARIO
+
+const elementTitle = document.querySelector('#js-title');
+const elementJob = document.querySelector('#js-job');
+const elementEmail = document.querySelector('#js-email')
+const inputTitle = document.querySelector('#txtFullName');
+const inputJob = document.querySelector('#txtJob');
+const inputEmail = document.querySelector('#txtEmail')
+
+
+
+const changeName = () => elementTitle.innerHTML = inputTitle.value;
+const changeJob = () =>  elementJob.innerHTML = inputJob.value;
+//const addEmail = () => elementEmail.href = inputEmail.value;
+
+
+
+function validarEmail(email) {
+	if (/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/.test(email)){
+		elementEmail.href = inputEmail.value;
+	} else {
+    console.log('esta mal');
+	}
+}
+
+let email = inputEmail.value;
+validarEmail(email);
+
+
+// function addEmail() {
+//   if (inputEmail.value === "hola@ana.com") {
+//     elementEmail.href = inputEmail.value;
+//   } else  {
+//    console.log('esta mal');
+//   }
+// }
+
+
+
+inputTitle.addEventListener('keyup', changeName);
+inputJob.addEventListener('keypress', changeJob);
+// inputEmail.addEventListener('change', addEmail)
+
+
