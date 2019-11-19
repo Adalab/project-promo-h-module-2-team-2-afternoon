@@ -1,5 +1,6 @@
 .main{
-	width: 100vw;
+	width: 100%;
+	height: rem(458);
 	background-color: #f5f5f5;
 	display: flex;
 	flex-direction: column;
@@ -8,6 +9,10 @@
 	@media all  and (min-width:768px){
 		height: rem(963);
 	}
+	@media all  and (min-width:1024px){
+		height: 100vh;
+	}
+
 
 	&__photo {
 		width: rem(250);
@@ -23,20 +28,20 @@
 		}
 		
 		@media all  and (min-width:768px){
-			width: rem(331);
-			height: rem(80);
-			margin-bottom: rem(27);
+			width: rem(419);
+			height: rem(105);
+			margin-bottom: rem(31);
 		}
 	}
 
 	&__section{
-		max-width: rem(264.8);
+		width: rem(264.8);
 		margin-bottom: rem(17.8);
-		
-		/*@media all  and (min-width:768px){
-			max-width: rem(403);
+		@media all  and (min-width:768px){
+			width: rem(331);
+			height: rem(80);
 			margin-bottom: rem(27);
-		}*/
+		}
 	}
 
 	&__title {
@@ -62,9 +67,9 @@
 		font-family: $OpenSans;
 		font-size: rem(12.8);
 		@media all  and (min-width:768px){
-			width: rem(331);
-			height: rem(48);
-			font-size: rem(16);
+				width: rem(331);
+				height: rem(48);
+				font-size: rem(16);
 		}
 	}
 
@@ -99,7 +104,7 @@
 				align-items: center;
 				color: $orange;
 				@media all  and (min-width:768px){
-					font-size: rem(28);
+						font-size: rem(28);
 				}
 				&__text{
 					color: #54585a;
@@ -127,8 +132,8 @@
 		justify-content: center;
 		align-items: center;
 		@media all  and (min-width:768px){
-			margin-top: rem(186);
-			margin-bottom: rem(59);
+				margin-top: rem(186);
+				margin-bottom: rem(59);
 		}
 	}
 	.button__text{

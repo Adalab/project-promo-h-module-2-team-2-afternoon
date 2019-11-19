@@ -10,7 +10,7 @@ function toogle () {
     elementHidden.classList.remove('hidden');
     arrowActive.classList.remove('fa-chevron-down');
     arrowActive.classList.add('fa-chevron-up');
-  } else if (elementHidden.classList.contains('hidden')===false) {
+  } else {
     elementHidden.classList.add('hidden'); 
     arrowActive.classList.remove('fa-chevron-up');
     arrowActive.classList.add('fa-chevron-down');
@@ -30,7 +30,7 @@ function showNotshowForm () {
     arrowActiveForm.classList.remove('fa-chevron-down');
     arrowActiveForm.classList.add('fa-chevron-up');
     createFill.style.padding = '0 0 30px 0';
-  } else if (form.classList.contains('hidden')===false) {
+  } else {
     form.classList.add('hidden');
     arrowActiveForm.classList.remove('fa-chevron-up');
     arrowActiveForm.classList.add('fa-chevron-down');
@@ -46,7 +46,7 @@ const createIntroElement = document.querySelector('.create-intro');
 const arrowActiveShare = document.querySelector('.arrow-button-share');
 
   function showNotShow() {
-    if (createButton.classList.contains('hidden')===true){
+    if (createButton.classList.contains('hidden')){
       createButton.classList.remove('hidden');
       arrowActiveShare.classList.remove('fa-chevron-down');
       arrowActiveShare.classList.add('fa-chevron-up');
@@ -86,6 +86,19 @@ function changeColorOne () {
 
 firstColors.addEventListener('click', changeColorOne)
 
+function showNotshowForm () {
+  if (form.classList.contains('hidden')) {
+    form.classList.remove('hidden');
+    arrowActiveForm.classList.remove('fa-chevron-down');
+    arrowActiveForm.classList.add('fa-chevron-up');
+    createFill.style.padding = '0 0 30px 0';
+  } else {
+    form.classList.add('hidden');
+    arrowActiveForm.classList.remove('fa-chevron-up');
+    arrowActiveForm.classList.add('fa-chevron-down');
+  }
+}
+headerForm.addEventListener('click', showNotshowForm);
 
 const secondColors = document.getElementById('color-two-selected');
 
@@ -116,10 +129,6 @@ function changeColorThree () {
 thirdColors.addEventListener('click', changeColorThree);
 
 //boton de reset
-
-/*document.getElementById('reset').click = function() {
-  document.querySelector('.fill__form').value = "";
-};*/
 
 const resetButton = document.getElementById('reset');
 function resetForm() {
