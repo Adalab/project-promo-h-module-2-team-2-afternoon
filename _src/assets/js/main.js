@@ -44,32 +44,25 @@ arrow.addEventListener('click',changeArrow);
 
 
 
-// TOOGLE PALETA COLORES - falta
-const div =  document.querySelector("#js-toogle");
-const elementHidden = document.querySelector('#toogle');
-
-
-function toogle () {
-  if (elementHidden.classList.contains('hidden')) {
-    elementHidden.classList.remove('hidden'); 
-  }
-}
-div.addEventListener('click', toogle);
 
 //FORMULARIO
 
 const elementTitle = document.querySelector('#js-title');
 const elementJob = document.querySelector('#js-job');
-const elementEmail = document.querySelector('#js-email')
+const elementEmail = document.querySelector('#js-email');
+const elementMobile = document.querySelector('#js-mobile');
+const elementLinkedin = document.querySelector('#js-linkedin');
 const inputTitle = document.querySelector('#txtFullName');
 const inputJob = document.querySelector('#txtJob');
 const inputEmail = document.querySelector('#txtEmail')
+const inputMobile = document.querySelector('#txtPhoneNumber';)
 
 
 
 const changeName = () => elementTitle.innerHTML = inputTitle.value;
 const changeJob = () =>  elementJob.innerHTML = inputJob.value;
 const addEmail = () => elementEmail.href = inputEmail.value;
+
 
 
 
