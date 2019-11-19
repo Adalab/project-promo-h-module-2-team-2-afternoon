@@ -55,7 +55,7 @@ const elementLinkedin = document.querySelector('#js-linkedin');
 const inputTitle = document.querySelector('#txtFullName');
 const inputJob = document.querySelector('#txtJob');
 const inputEmail = document.querySelector('#txtEmail')
-const inputMobile = document.querySelector('#txtPhoneNumber';)
+const inputMobile = document.querySelector('#txtPhoneNumber')
 
 
 
