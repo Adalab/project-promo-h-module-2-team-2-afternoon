@@ -6,6 +6,10 @@
 	align-items: center;
 	margin-bottom: rem(30);
 	margin-top: rem(31);
+	@media all and (min-width:768px) {
+		align-items: baseline;
+		margin-left: rem(40);
+	}
 }
 
 .header__photo{
