@@ -1,32 +1,32 @@
 .main{
 	width: 100vw;
-	height: 80vh;
 	background-color: #f5f5f5;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding-top: rem(95);
-	padding-bottom: rem(30);
-
-	/*@media all  and (min-width:768px){
-		max-height:90vh;
-	}*/
+	@media all  and (min-width:768px){
+		height: rem(963);
+	}
 
 	&__photo {
 		width: rem(250);
 		height: rem(63);
-		background: url(../images/profile.svg);
-		background-size: cover;
-		background-position: center;
+		margin-top: rem(95);
 		margin-bottom: rem(35.4);
-		
-		/*@media all  and (min-width:768px){
-			width: rem(419);
-			height: rem(105);
+		@media all  and (min-width:768px){
+			margin-top: rem(350);
 			margin-bottom: rem(31);
-			margin-top: auto;
-		}*/
+		}
+		&--logo{
+			width: 100%;
+		}
+		
+		@media all  and (min-width:768px){
+			width: rem(331);
+			height: rem(80);
+			margin-bottom: rem(27);
+		}
 	}
 
 	&__section{
@@ -40,45 +40,57 @@
 	}
 
 	&__title {
+		width: rem(223);
+		height: rem(24);
 		color: $orange;
+		margin: auto;
 		text-align: center;
 		font-family: $Merriweather;
 		font-size: rem(19.2);
 		
-		/*@media all  and (min-width:768px){
-			font-size: rem(28);
-		}*/
+		@media all  and (min-width:768px){
+			width: rem(278);
+			height: rem(31);
+			font-size: rem(24);
+		}
 	}
 
 	&__text {
+		height: rem(38.4);
 		color: $darkblue;
 		text-align: center;
 		font-family: $OpenSans;
 		font-size: rem(12.8);
-		/*@media all  and (min-width:768px){
-				font-size: rem(16);
-		}*/
+		@media all  and (min-width:768px){
+			width: rem(331);
+			height: rem(48);
+			font-size: rem(16);
+		}
 	}
 
 	&__symbols {
-		width: 100%;
+		width: rem(268);
 		height: rem(73.8);
-		max-width: rem(268);
-		padding: 0 rem(20);
+		padding: rem(15) rem(20) rem(10) rem(20);
 		border: 1.6px solid rgba(225, 115, 52, 0.21);
 		border-radius: 4px;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		/*@media all  and (min-width:768px){
-			max-width: rem(403);
-			margin-bottom: rem(186); 
-		}*/
+		@media all  and (min-width:768px){
+			width: rem(325);
+			height: rem(86); 
+		}
 		.content-symbols {
 			width: rem(60);
+			height: rem(48.8);
 			text-align: center;
 			border: none;
+			@media all  and (min-width:768px){
+				width: rem(75);
+				height: rem(61);
+			}
 
 			.symbols{
 				font-size: rem(22.4);
@@ -86,19 +98,18 @@
 				justify-content: center;
 				align-items: center;
 				color: $orange;
-				
-				/*@media all  and (min-width:768px){
-						font-size: rem(28);
-				}*/
+				@media all  and (min-width:768px){
+					font-size: rem(28);
+				}
 				&__text{
 					color: #54585a;
 					font-size: rem(12.8);
 					font-family: $OpenSans;
 					margin-top: rem(2);
 					margin: rem(0);
-					/*@media all  and (min-width:768px){
+					@media all  and (min-width:768px){
 						font-size: rem(16);
-					}*/
+					}
 				}
 			}
 		}
@@ -111,12 +122,14 @@
 		font-weight: 600;
 		background-color: $dirtyblue;
 		margin-top: rem(38.6);
+		margin-bottom: rem(30);
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		/*@media all  and (min-width:768px){
-				margin-bottom: rem(59);
-		}*/
+		@media all  and (min-width:768px){
+			margin-top: rem(186);
+			margin-bottom: rem(59);
+		}
 	}
 	.button__text{
 		color: $white;

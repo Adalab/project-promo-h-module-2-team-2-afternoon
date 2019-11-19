@@ -69,6 +69,19 @@ getElement.addEventListener('click',removeClass);
 
 
 //Cambiar colores en preview
+//---First-Option-----
+const darkblue = '#114e4e';
+const hospitalgreen = '#a2deaf';
+const dirtyblue = '#438792';
+//---Second-Option-----
+const driedBlood = '#420101';
+const tomato = '#e95626';
+const rustyRed = '#bd1010';
+//---Third-Option-----
+const slateBlue = '#3e5b65';
+const fadedOrange = '#eab052';
+const lightGreyBlue = '#a0c0cf';
+
 const name = document.querySelector('.preview__content__title');
 const contentBorder = document.querySelector('.preview__content');
 const iconOne = document.querySelector('.icon--1');
@@ -84,20 +97,19 @@ function changeColorOne() {
     // Ejecutar acciones sobre el nodo listaNodosOperadores[i].
 
   //nombre y apellidos
-  name.style.color = '$darkblue';
+  name.style.color = darkblue;
   //borde nombre y apellidos
-  contentBorder.style.borderColor = '$dirtyblue';
+  contentBorder.style.borderColor = dirtyblue;
   //iconos
-  iconOne.style.color = '$darkblue';
-  iconTwo.style.color = '$darkblue';
-  iconThree.style.color = '$darkblue';
-  iconFour.style.color = '$darkblue';
+  iconOne.style.color = darkblue;
+  iconTwo.style.color = darkblue;
+  iconThree.style.color = darkblue;
+  iconFour.style.color = darkblue;
   /*icons.style.color = '#fff';*/
   //borde iconos
-  iconOne.style.borderColor = '$hospitalgreen';
-  iconTwo.style.borderColor = '$hospitalgreen';
-  iconThree.style.borderColor = '$hospitalgreen';
-  iconFour.style.borderColor = '$hospitalgreen';
+  iconTwo.style.borderColor = hospitalgreen;
+  iconThree.style.borderColor = hospitalgreen;
+  iconFour.style.borderColor = hospitalgreen;
   
 }
 
@@ -108,19 +120,19 @@ const secondColors = document.getElementById('color-two-selected');
 
 function changeColorTwo() {
   //nombre y apellidos
-  name.style.color = '$driedBlood';
+  name.style.color = driedBlood;
   //borde nombre y apellidos
-  contentBorder.style.borderColor = '$rustyRed';
+  contentBorder.style.borderColor = rustyRed;
   //iconos
-  iconOne.style.color = '$driedBlood';
-  iconTwo.style.color = '$driedBlood';
-  iconThree.style.color = '$driedBlood';
-  iconFour.style.color = '$driedBlood';
+  iconOne.style.color = driedBlood;
+  iconTwo.style.color = driedBlood;
+  iconThree.style.color = driedBlood;
+  iconFour.style.color = driedBlood;
   //borde iconos
-  iconOne.style.borderColor = '$tomato';
-  iconTwo.style.borderColor = '$tomato';
-  iconThree.style.borderColor = '$tomato';
-  iconFour.style.borderColor = '$tomato';
+  iconOne.style.borderColor = tomato;
+  iconTwo.style.borderColor = tomato;
+  iconThree.style.borderColor = tomato;
+  iconFour.style.borderColor = tomato;
 }
 
 secondColors.addEventListener('click', changeColorTwo);
@@ -130,19 +142,19 @@ const thirdColors = document.getElementById('color-three-selected');
 
 function changeColorThree() {
   //nombre y apellidos
-  name.style.color = '$slateBlue';
+  name.style.color = slateBlue;
   //borde nombre y apellidos
-  contentBorder.style.borderColor = '$fadedOrange';
+  contentBorder.style.borderColor = fadedOrange;
   //iconos
-  iconOne.style.color = '$slateBlue';
-  iconTwo.style.color = '$slateBlue';
-  iconThree.style.color = '$slateBlue';
-  iconFour.style.color = '$slateBlue';
+  iconOne.style.color = slateBlue;
+  iconTwo.style.color = slateBlue;
+  iconThree.style.color = slateBlue;
+  iconFour.style.color = slateBlue;
   //borde iconos
-  iconOne.style.borderColor = '$lightGreyBlue';
-  iconTwo.style.borderColor = '$lightGreyBlue';
-  iconThree.style.borderColor = '$lightGreyBlue';
-  iconFour.style.borderColor = '$lightGreyBlue';
+  iconOne.style.borderColor = lightGreyBlue;
+  iconTwo.style.borderColor = lightGreyBlue;
+  iconThree.style.borderColor = lightGreyBlue;
+  iconFour.style.borderColor = lightGreyBlue;
 }
 
 thirdColors.addEventListener('click', changeColorThree);
