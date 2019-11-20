@@ -30,7 +30,7 @@ function showNotshowForm () {
   if (form.classList.contains('hidden')) {
     form.classList.remove('hidden');
     arrowActiveForm.classList.remove('fa-chevron-down');
-    arrowActiveForm.classList.add('fa-chevron-up');
+    arrowActiveForm.classList.add('arrow-button-rotate ');
     createFill.style.padding = '0 0 30px 0';
     elementHidden.classList.add('hidden');
   createButton.classList.add('hidden');
