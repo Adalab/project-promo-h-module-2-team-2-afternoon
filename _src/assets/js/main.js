@@ -153,38 +153,25 @@ const addGithub = () => elementGithub.href = inputGithub.value;
 const addEmail = () => {
   elementEmail.href = `mailto: ${inputEmail.value}`;
   ValidateEmail()
-}
-const addPhone = () => {
-  elementMobile.href = `+34 ${parseInt(inputMobile.value)}`;
-  ValidatePhone ()
+  
 }
 
-// const checkEmail = () => {
-//   const iconEmail = document.querySelector('.icon--1');
-//   const iconGit = document.querySelector('.icon--4');
-//   if (elementGithub.href === ""){
-//   iconGit.classList.toogle('fill-empty');
-//   }
-// }
 
-checkEmail()
+const checkEmail = () => {
+  if (inputEmail.value = ""){
+  elementEmail.classList.add('fill-empty');
+  }
+}
+checkEmail ()
 
 function ValidateEmail() {
-  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(inputEmail.value)) {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(inputEmail.value))
+   {
      return (true)
    }
      alert("Tu email es incorrecto")
      return (false)
  }
-
-function ValidatePhone () {
-  if (/^[\s\S]{0,9}$/.test(inputMobile.value)) {
-    return (true)
-  }
-  alert("Tu teléfono es incorrecto")
-     return (false)
-}
-
 
 
 function changeColorThree () {
@@ -202,33 +189,20 @@ thirdColors.addEventListener('click', changeColorThree);
 //boton de reset
 
 const resetButton = document.getElementById('reset');
-
 function resetForm() {
   document.querySelector('.fill__form').reset();
   document.querySelector('.create__design--form').reset();
   if(previewElement.classList.contains('blue')) {
-    return resetText();
+    return;
   } else if(previewElement.classList.contains('red')) {
     previewElement.classList.remove('red');
     previewElement.classList.add('blue');
-    
   } else if(previewElement.classList.contains('yellow')) {
     previewElement.classList.remove('yellow');
     previewElement.classList.add('blue');
+  }
     
-  }  
-  
 }
-
-const resetText = () => {
-  elementTitle.innerHTML = 'Nombre Apellidos';
-  elementJob.innerHTML = 'Front end developer';
-  elementLinkedin.href = '';
-  elementMobile.href = '';
-  elementGithub.href = '';
-  elementEmail.href = '';
-}
- 
 
 
 
@@ -237,7 +211,6 @@ inputJob.addEventListener('keypress', changeJob);
 inputEmail.addEventListener('change', addEmail);
 inputLinkedin.addEventListener('keyup', addLinkedin);
 inputGithub.addEventListener('keyup', addGithub);
-inputMobile.addEventListener('keypress', addPhone);
 
 
 resetButton.addEventListener('click', resetForm);
