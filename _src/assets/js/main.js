@@ -128,6 +128,52 @@ secondColors.addEventListener('click', changeColorTwo)
 
 const thirdColors = document.getElementById('color-three-selected');
 
+
+//FORMULARIO
+
+const elementTitle = document.querySelector('#js-title');
+const elementJob = document.querySelector('#js-job');
+const elementEmail = document.querySelector('#js-email');
+const elementMobile = document.querySelector('#js-mobile');
+const elementLinkedin = document.querySelector('#js-linkedin');
+const elementGithub = document.querySelector('#git');
+const inputTitle = document.querySelector('#txtFullName');
+const inputJob = document.querySelector('#txtJob');
+const inputEmail = document.querySelector('#txtEmail');
+const inputMobile = document.querySelector('#txtPhoneNumber');
+const inputLinkedin = document.querySelector('#txtLinkedinUser');
+const inputGithub = document.querySelector('#txtGithubUser');
+
+
+
+const changeName = () => elementTitle.innerHTML = inputTitle.value;
+const changeJob = () =>  elementJob.innerHTML = inputJob.value;
+const addLinkedin = () => elementLinkedin.href = inputLinkedin.value;
+const addGithub = () => elementGithub.href = inputGithub.value;
+const addEmail = () => {
+  elementEmail.href = `mailto: ${inputEmail.value}`;
+  ValidateEmail()
+  
+}
+
+
+const checkEmail = () => {
+  if (inputEmail.value = ""){
+  elementEmail.classList.add('fill-empty');
+  }
+}
+checkEmail ()
+
+function ValidateEmail() {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(inputEmail.value))
+   {
+     return (true)
+   }
+     alert("Tu email es incorrecto")
+     return (false)
+ }
+
+
 function changeColorThree () {
   if(previewElement.classList.contains('blue')) {
     previewElement.classList.remove('blue');
@@ -155,7 +201,18 @@ function resetForm() {
     previewElement.classList.remove('yellow');
     previewElement.classList.add('blue');
   }
+    
 }
+
+
+
+inputTitle.addEventListener('keyup', changeName);
+inputJob.addEventListener('keypress', changeJob);
+inputEmail.addEventListener('change', addEmail);
+inputLinkedin.addEventListener('keyup', addLinkedin);
+inputGithub.addEventListener('keyup', addGithub);
+
+
 resetButton.addEventListener('click', resetForm);
 
 //Botón añadir imagen
