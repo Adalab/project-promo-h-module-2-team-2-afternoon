@@ -90,3 +90,8 @@
 .fill-error {
 	border: rem(1) solid $orange;
 }
+
+//Esta clase es para que el input no quede vacío
+.fill-empty {
+	border: 1px solid red;
+}

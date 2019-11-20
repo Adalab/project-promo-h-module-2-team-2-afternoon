@@ -52,39 +52,47 @@ const elementJob = document.querySelector('#js-job');
 const elementEmail = document.querySelector('#js-email');
 const elementMobile = document.querySelector('#js-mobile');
 const elementLinkedin = document.querySelector('#js-linkedin');
+const elementGithub = document.querySelector('#git');
 const inputTitle = document.querySelector('#txtFullName');
 const inputJob = document.querySelector('#txtJob');
-const inputEmail = document.querySelector('#txtEmail')
-const inputMobile = document.querySelector('#txtPhoneNumber')
+const inputEmail = document.querySelector('#txtEmail');
+const inputMobile = document.querySelector('#txtPhoneNumber');
+const inputLinkedin = document.querySelector('#txtLinkedinUser');
+const inputGithub = document.querySelector('#txtGithubUser');
 
 
 
 const changeName = () => elementTitle.innerHTML = inputTitle.value;
 const changeJob = () =>  elementJob.innerHTML = inputJob.value;
-const addEmail = () => elementEmail.href = inputEmail.value;
+const addLinkedin = () => elementLinkedin.href = inputLinkedin.value;
+const addGithub = () => elementGithub.href = inputGithub.value;
+const addEmail = () => {
+  elementEmail.href = `mailto: ${inputEmail.value}`;
+  ValidateEmail()
+  
+}
 
+checkEmail ()
 
-
-
-// function validarEmail(email) {
-// 	if (/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/.test(email)){
-// 		elementEmail.href = inputEmail.value;
-// 	} else {
-//     console.log('esta mal');
-// 	}
-// }
-
-// let email = inputEmail.value;
-// validarEmail(email);
-
-
-
+function ValidateEmail() {
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(inputEmail.value))
+  {
+    return (true)
+  }
+    alert("Tu email es incorrecto")
+    return (false)
+}
 
 
 
 inputTitle.addEventListener('keyup', changeName);
 inputJob.addEventListener('keypress', changeJob);
 inputEmail.addEventListener('change', addEmail);
+inputLinkedin.addEventListener('keyup', addLinkedin);
+inputGithub.addEventListener('keyup', addGithub);
 
-
-
+const checkEmail = () => {
+  if (inputEmail.value = ""){
+  elementEmail.classList.add('fill-empty');
+  }
+}
