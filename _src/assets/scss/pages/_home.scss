@@ -17,11 +17,15 @@
 	&__photo {
 		width: rem(250);
 		height: rem(63);
-		margin-top: rem(95);
+		margin-top: rem(96);
 		margin-bottom: rem(35.4);
 		@media all  and (min-width:768px){
-			margin-top: rem(350);
-			margin-bottom: rem(31);
+			margin-top: rem(81);
+			margin-bottom: rem(20);
+		}
+		@media all  and (min-width:1024px){
+			margin-top: rem(117);
+			margin-bottom: rem(30);
 		}
 		&--logo{
 			width: 100%;
@@ -40,7 +44,7 @@
 		@media all  and (min-width:768px){
 			width: rem(331);
 			height: rem(80);
-			margin-bottom: rem(27);
+			margin-bottom: rem(15);
 		}
 	}
 
@@ -126,14 +130,18 @@
 		border-radius: 21px;
 		font-weight: 600;
 		background-color: $dirtyblue;
-		margin-top: rem(38.6);
-		margin-bottom: rem(30);
+		margin-top: rem(40);
+		margin-bottom: rem(40);
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		@media all  and (min-width:768px){
-				margin-top: rem(186);
-				margin-bottom: rem(59);
+				margin-top: rem(40);
+				margin-bottom: rem(40);
+		}
+		@media all  and (min-width:1024px){
+			margin-top: rem(60);
+			margin-bottom: rem(70);
 		}
 	}
 	.button__text{
@@ -142,43 +150,4 @@
 		font-size: rem(16);
 		text-transform: uppercase;
 	}
-}
-
-/*MEDIA QUERIES*/
-@media all  and (min-width:768px) {
-
-	.main {
-
-		&__photo {
-			
-
-		}
-
-		&__section {
-	
-		}
-
-		&__title {
-
-		}
-
-		&__text {
-
-		}
-
-		&__symbols {
-
-		}
-	}
-	.symbols {
-		
-
-		&__text {
-		}
-		&__button{
-
-		}
-	}
-			
-	
 }

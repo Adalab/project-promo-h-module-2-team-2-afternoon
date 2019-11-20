@@ -21,17 +21,13 @@
 
 .preview {
 	padding: rem(38) rem(40) rem(40) rem(40);
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-row: 1fr 1fr;
 	justify-content: center;
 	align-items: flex-start;
 	background: #bfcdd0;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to top, #dde9ed, #bfcdd0);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to top, #dde9ed, #bfcdd0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	@media all and (min-width:1024px){
-		display: grid;
-		grid-row: 1fr 1fr;
-	}
 	
 	&__card {
 		background-color: $white;
@@ -55,9 +51,7 @@
 		font-family: $OpenSans;
 		line-height: rem(20);
 		text-transform: uppercase;
-		@media all and (min-width:1024px){
-			align-self: flex-end;
-		}	   
+		align-self: flex-end;   
 	}
 	&__content {
 		border-left: solid rem(5) $dirtyblue;
