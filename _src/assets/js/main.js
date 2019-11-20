@@ -153,8 +153,12 @@ const addGithub = () => elementGithub.href = inputGithub.value;
 const addEmail = () => {
   elementEmail.href = `mailto: ${inputEmail.value}`;
   ValidateEmail()
-  
 }
+const addPhone = () => {
+  elementMobile.href = parseInt(inputMobile.value);
+  ValidatePhone()
+}
+ 
 
 
 const checkEmail = () => {
@@ -171,7 +175,15 @@ function ValidateEmail() {
    }
      alert("Tu email es incorrecto")
      return (false)
- }
+}
+
+function ValidatePhone () {
+  if (/^[\s\S]{0,9}$/.test(inputMobile.value)) {
+    return (true)
+  }
+  alert("Tu teléfono es incorrecto")
+     return (false)
+}
 
 
 function changeColorThree () {
@@ -193,7 +205,7 @@ function resetForm() {
   document.querySelector('.fill__form').reset();
   document.querySelector('.create__design--form').reset();
   if(previewElement.classList.contains('blue')) {
-    return;
+    return resetText();
   } else if(previewElement.classList.contains('red')) {
     previewElement.classList.remove('red');
     previewElement.classList.add('blue');
@@ -201,7 +213,14 @@ function resetForm() {
     previewElement.classList.remove('yellow');
     previewElement.classList.add('blue');
   }
-    
+}
+const resetText = () => {
+  elementTitle.innerHTML = 'Nombre Apellidos';
+  elementJob.innerHTML = 'Front end developer';
+  elementLinkedin.href = '';
+  elementMobile.href = '';
+  elementGithub.href = '';
+  elementEmail.href = '';
 }
 
 
@@ -211,6 +230,7 @@ inputJob.addEventListener('keypress', changeJob);
 inputEmail.addEventListener('change', addEmail);
 inputLinkedin.addEventListener('keyup', addLinkedin);
 inputGithub.addEventListener('keyup', addGithub);
+inputMobile.addEventListener('keyup', addPhone);
 
 
 resetButton.addEventListener('click', resetForm);
