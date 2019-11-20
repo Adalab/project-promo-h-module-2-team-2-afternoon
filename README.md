@@ -1,1 +1,4 @@
-# project-promo-h-module-2-team-2-afternoon
+#LAS UNDEFINED
+
+Proyecto del equipo 2 de Adalab. 
+Crea una perfil profesional online para compartir en redes.
