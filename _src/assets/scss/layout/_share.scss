@@ -105,6 +105,9 @@
     .hidden {
       display: none;
     }
+    .arrow-button-rotate {
+      transform: rotate(180deg);
+    }
     .noPadding {
       padding-bottom: 7px;
     }
