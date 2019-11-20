@@ -2,6 +2,7 @@
 .content {
 	width: 100%;
 	margin: 0;
+	margin-top: rem(20);
 	background-image: linear-gradient(to bottom, $beige, $white 9%);
    
 	
@@ -19,7 +20,6 @@
 
 
 .preview {
-	
 	padding: rem(38) rem(40) rem(40) rem(40);
 	display: flex;
 	flex-direction: column;
@@ -28,9 +28,10 @@
 	background: #bfcdd0;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to top, #dde9ed, #bfcdd0);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to top, #dde9ed, #bfcdd0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-	
+	@media all and (min-width:1024px){
+		display: grid;
+		grid-row: 1fr 1fr;
+	}
 	
 	&__card {
 		background-color: $white;
@@ -41,8 +42,6 @@
 		-webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.25);
 		-moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.25);
 		box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.25);
-		align-self: center;
-	   
 	}
 	
 	&__button {
@@ -56,15 +55,13 @@
 		font-family: $OpenSans;
 		line-height: rem(20);
 		text-transform: uppercase;
-
-	   
+		@media all and (min-width:1024px){
+			align-self: flex-end;
+		}	   
 	}
-
 	&__content {
 		border-left: solid rem(5) $dirtyblue;
-
 		&__title {
-		
 			font-family: $titleCard;
 			font-weight: 700;
 			color: $darkblue;
@@ -82,7 +79,6 @@
 			margin-bottom: rem(10);
 		}
 	}
-	
 	&__image {
 		width: rem(240);
 		height: rem(200);
@@ -94,7 +90,6 @@
 	line-height: rem(20);
 	color: #54585a;
 	margin-right: rem(6);
-	  
 }
 
 //**SOCIAL ICONS**//
@@ -102,11 +97,9 @@
 .preview__icons {
 	margin-left: rem(18);
 	padding: rem(17) rem(0) rem(19);
-	
 }
 
 .icon {
-	
 	color: $darkblue;
 	font-size: rem(18);
 	margin: rem(40) rem(0); 
@@ -148,7 +141,6 @@
 	.content-preview {
 		width: 100%;
 		min-width: rem(329);
-		max-width: rem(585);
 	}
 	.preview {
 		height: 100vh;
@@ -162,10 +154,44 @@
 		margin: rem(7) rem(30) rem(30) rem(0);
 		padding: rem(0);
 	}
-
 }
 	
+.blue {
+	.preview__content {
+		border-color: $dirtyblue;
+		.preview__content__title {
+			color: $darkblue;
+		}
+	}
+	.icon--1, .icon--2, .icon--3, .icon--4 {
+		color: $darkblue;
+		border-color: $hospitalgreen;
+	}
+}
 
+.red {
+	.preview__content {
+		border-color: $rustyRed;
+		.preview__content__title {
+			color: $driedBlood;
+		}
+	}
+	.icon--1, .icon--2, .icon--3, .icon--4 {
+		color: $driedBlood;
+		border-color: $tomato;
+	}
+}
 
-
+.yellow {
+	.preview__content {
+		border-color: $fadedOrange;
+		.preview__content__title {
+			color: $slateBlue;
+		}
+	}
+	.icon--1, .icon--2, .icon--3, .icon--4 {
+		color: $slateBlue;
+		border-color: $lightGreyBlue;
+	}
+}
 

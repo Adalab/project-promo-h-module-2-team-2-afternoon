@@ -1,13 +1,13 @@
 .create__fill {
 	border-bottom: rem(1) solid $white-two;
-	padding-bottom: rem(10);
+	padding-bottom: rem(7);
 
 	.fill__header-container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		color: $gunmetal;
-		padding: rem(10) rem(0) rem(25);
+		padding: rem(10) rem(0) 0;
 		text-transform: uppercase;
 		font-size: rem(18);
 		.fill__header {
@@ -30,6 +30,7 @@
 
 	.fill__form {
 		margin-bottom: rem(20);
+		padding-top: rem(25);
 
 		.fa-keyboard {
 			color: $orange;
@@ -54,6 +55,9 @@
 			font-family: $OpenSans;
 			&::placeholder{
 				color: $pinkishgrey;
+			}
+			&:last-child {
+				margin-bottom: rem(23);
 			}
 		}
 		.fill__input-file {
