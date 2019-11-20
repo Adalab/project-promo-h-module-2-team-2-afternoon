@@ -157,3 +157,13 @@ function resetForm() {
   }
 }
 resetButton.addEventListener('click', resetForm);
+
+//Botón añadir imagen
+const btnAddImage = document.getElementById('btnAddImage');
+
+function manageAddImageButton(){
+    const btnFileAddImage = document.getElementById('btnFileAddImage');
+    btnFileAddImage.click();
+};
+
+btnAddImage.addEventListener('click', manageAddImageButton);
