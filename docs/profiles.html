@@ -1,0 +1,164 @@
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="./assets/css/normalize.css">
+        <link rel="stylesheet" href="./assets/css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:900&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap"
+        rel="stylesheet">
+        <script src="http://kit.fontawesome.com/672e03816c.js" crossorigin="anonymous"></script>
+        <script src="http://kit.fontawesome.com/672e03816c.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <div class="wrapper">
+            <header class="header"> <a href="./index.html#home"><div class="header__photo"></div></a>
+
+            </header>
+            <div class="content">
+                <div class="content-preview">
+                    <section class="preview blue">
+                        <button class="preview__button" id="reset"><i class="fa fa-trash-o fa-lg"></i>Reset</i>
+                        </button>
+                        <div class="preview__card">
+                            <div class="preview__content">
+                                	<h1 class="preview__content__title" id="js-title">nombre apellido</h1>
+
+                                <p class="preview__content__text" id="js-job">Front end developer</p>
+                            </div>
+                            <img class="preview__image" src="./assets/images/user.png">
+                            <div class="preview__icons">	<span class="icon">
+						<a class="icon--1" href="" id="js-mobile"><i class="fas fa-mobile-alt"></i></a>
+					</span>
+	<span class="icon">
+						<a class="icon--2" href="" id="js-email"><i class="far fa-envelope"></i></a>
+					</span>
+	<span class="icon">
+						<a class="icon--3" href="" id="js-linkedin"><i class="fab fa-linkedin-in"></i></a>
+					</span>
+	<span class="icon">
+						<a class="icon--4" href="" id="git"><i class="fab fa-github-alt"></i></a>
+					</span>
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="content-create">
+                    <section class="create">
+                        <div class="create__design">
+                            <div class="design-view" id="js-toogle">
+                                <div class="view-left">	<span class=create__design--icon><i class="far fa-object-ungroup"></i></span>
+
+                                    <h2
+                                    class="create__design--title">Diseña</h2>
+                                </div>
+                                <div class="create__design--arrow">	<span><i class="arrow-button fas fa-chevron-down"></i></span>
+
+                                </div>
+                            </div>
+                            <div class="view-hidden hidden" id='toogle'>	<span class="create__design--text">Colores</span>
+
+                                <form class="create__design--form">
+                                    <div class="colormix">
+                                        <label id="color-one"></label>
+                                        <input class="color__one" id="color-one-selected" type="radio"
+                                        value="mixblue" name="COLORES" checked>
+                                        <div class="colormix__darkblue"></div>
+                                        <div class="colormix__blue"></div>
+                                        <div class="colormix__acqua"></div>
+                                    </div>
+                                    <div class="colormix">
+                                        <label id="color-two"></label>
+                                        <input class="color__two" id="color-two-selected" type="radio"
+                                        value="mixred" name="COLORES">
+                                        <div class="colormix__darkred"></div>
+                                        <div class="colormix__red"></div>
+                                        <div class="colormix__orange"></div>
+                                    </div>
+                                    <div class="colormix">
+                                        <label id="color-three"></label>
+                                        <input class="color__three" id="color-three-selected" type="radio"
+                                        value="mix" name="COLORES">
+                                        <div class="colormix__metalblue"></div>
+                                        <div class="colormix__yellow"></div>
+                                        <div class="colormix__lightgrey"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="create__fill">
+                            <div class="fill__header-container">
+                                <div class="fill__header">	<i class="far fa-keyboard"></i>
+
+                                    	<h2 class="fill__title">rellena</h2>
+
+                                </div>	<i class="arrow-button-form fas fa-chevron-down"></i>
+
+                            </div>
+                            <form class="fill__form hidden" action="" method="post">
+                                <label class="fill__label" for="txtFullName">Nombre completo</label>
+                                <input class="fill__input" id="txtFullName" type="text"
+                                name="txtFullName" placeholder="Ej: Sally Jill" required>
+                                <label class="fill__label" for="txtJob">Puesto</label>
+                                <input class="fill__input" id="txtJob" type="text" name="txtJob"
+                                placeholder="Ej: Front-end unicorn" required>
+                                <label for="btnAddImage" class="fill__label">Imagen de perfil</label>
+                                <div class="fill__file-picker-wrapper">
+                                    <input class="fill__button" type="button" value="Añadir imagen" name="btnAddImage"
+                                    id="btnAddImage" required>
+                                    <input class="fill__input-file" id="btnFileAddImage" type="file" name="btnFileAddImage"
+                                    required>
+                                    <div class="fill__image-preview"></div>
+                                </div>
+                                <label class="fill__label" for="txtEmail">Email</label>
+                                <input class="fill__input" id="txtEmail" type="email" name="txtEmail"
+                                placeholder="Ej: sally-hill@gmail.com" required>
+                                <label class="fill__label" for="txtPhoneNumber">Teléfono</label>
+                                <input class="fill__input" id="txtPhoneNumber" type="tel"
+                                name="txtPhoneNumber" placeholder="Ej: 555-55-55" required>
+                                <label class="fill__label" for="txtLinkedinUser">Linkedin</label>
+                                <input class="fill__input" id="txtLinkedinUser" type="url"
+                                name="txtLinkedinUser" placeholder="Ej: linkedin.com/in/sally.hill">
+                                <label class="fill__label" for="txtGithubUser">GitHub</label>
+                                <input class="fill__input" id="txtGithubUser" type="text"
+                                value name="txtGithubUser" placeholder="Ej: @sally-hill" required>
+                            </form>
+                        </div>
+                        <div class="create__share">
+                            <div class="create-intro">
+                                	<h2 class="title"><i class="logo fas fa-share-alt"></i>comparte</h2>
+	<i class="arrow-button-share fas fa-chevron-down"></i>
+
+                            </div>
+                            <button id="create-button" class="hidden create-button form imput submit"
+                            type='submit'><i class="logo-button far fa-address-card"></i>crear tarjeta</button>
+                        </div>
+                        <div id="share-card" class="active-share hidden create__share-two">
+                            	<h2 class="title-share"><span>la</span> tarjeta ha sido creada</h2>
+	<a class="link-share" href="https://awesome-profile-card.com?id=A456DF0001">https://awesome-profile-card.com?id=A456DF0001</a>
+
+                            <button
+                            class="create-button-two form imput submit" type='submit'><i class="logo-button fab fa-twitter"></i><span>compartir</span> en twitter</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <footer class=footer>
+                <p class="footer__text">Awesome profile cards @2019</p>
+                <div class="footer__logo">
+                    <img class="footer__logo--photo" src="./assets/images/logo-adalab.png">
+                </div>
+            </footer>
+        </div>
+        <script src="./assets/js/main.js"></script>
+    </body>
+
+</html>
