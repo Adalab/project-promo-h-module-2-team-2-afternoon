@@ -10,6 +10,8 @@ function toogle () {
     elementHidden.classList.remove('hidden');
     arrowActive.classList.remove('fa-chevron-down');
     arrowActive.classList.add('fa-chevron-up');
+    form.classList.add('hidden');
+    createButton.classList.add('hidden');
   } else {
     elementHidden.classList.add('hidden'); 
     arrowActive.classList.remove('fa-chevron-up');
@@ -29,14 +31,22 @@ function showNotshowForm () {
     form.classList.remove('hidden');
     arrowActiveForm.classList.remove('fa-chevron-down');
     arrowActiveForm.classList.add('fa-chevron-up');
-    createFill.style.padding = '0 0 30px 0';
+    createFill.style.padding = '0 0 30px 0';
+    elementHidden.classList.add('hidden');
+  createButton.classList.add('hidden');
   } else {
     form.classList.add('hidden');
     arrowActiveForm.classList.remove('fa-chevron-up');
     arrowActiveForm.classList.add('fa-chevron-down');
   }
 }
+function hiddeOthersElements () {
+  elementHidden.classList.add('hidden');
+  createButton.classList.add('hidden');
+}
+
 headerForm.addEventListener('click', showNotshowForm);
+headerForm.addEventListener('click', hiddeOthersElements);
 
 //Desplegar share card
 let createButton = document.querySelector('.create-button');
@@ -50,6 +60,8 @@ const arrowActiveShare = document.querySelector('.arrow-button-share');
       createButton.classList.remove('hidden');
       arrowActiveShare.classList.remove('fa-chevron-down');
       arrowActiveShare.classList.add('fa-chevron-up');
+      form.classList.add('hidden');
+      elementHidden.classList.add('hidden');
     } else {
       createButton.classList.add('hidden');
       arrowActiveShare.classList.remove('fa-chevron-up');
@@ -143,6 +155,5 @@ function resetForm() {
     previewElement.classList.remove('yellow');
     previewElement.classList.add('blue');
   }
-
 }
 resetButton.addEventListener('click', resetForm);
