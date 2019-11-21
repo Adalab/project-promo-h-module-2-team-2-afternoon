@@ -1,24 +1,34 @@
 'use strict';
 
 // TOOGLE PALETA COLORES 
-const arrowActive = document.querySelector('.arrow-button');
-const div =  document.querySelector("#js-toogle");
-const elementHidden = document.querySelector('#toogle');
+const designArrowButton = document.querySelector('.design-arrow-button');
+const div = document.querySelector('#js-toggle');
+const elementHidden = document.querySelector('#toggle');
 
-function toogle () {
+function hideNotDesignElements () {
+  form.classList.add('hidden');
+  arrowActiveForm.classList.remove('fa-chevron-up');
+  arrowActiveForm.classList.add('fa-chevron-down');
+  createButton.classList.add('hidden');
+  arrowActiveShare.classList.remove('fa-chevron-up');
+  arrowActiveShare.classList.add('fa-chevron-down');
+  shareCardButton.classList.add('hidden')
+}
+
+function toggle () {
+  hideNotDesignElements ()
   if (elementHidden.classList.contains('hidden')) {
     elementHidden.classList.remove('hidden');
-    arrowActive.classList.remove('fa-chevron-down');
-    arrowActive.classList.add('fa-chevron-up');
-    form.classList.add('hidden');
-    createButton.classList.add('hidden');
+    designArrowButton.classList.remove('fa-chevron-down');
+    designArrowButton.classList.add('fa-chevron-up');
   } else {
     elementHidden.classList.add('hidden'); 
-    arrowActive.classList.remove('fa-chevron-up');
-    arrowActive.classList.add('fa-chevron-down');
+    designArrowButton.classList.remove('fa-chevron-up');
+    designArrowButton.classList.add('fa-chevron-down');
   }
 }
-div.addEventListener('click', toogle);
+
+div.addEventListener('click', toggle);
 
 //Desplegar formulario
 const arrowActiveForm = document.querySelector('.arrow-button-form');
@@ -26,61 +36,73 @@ const form = document.querySelector('.fill__form')
 const headerForm = document.querySelector('.fill__header-container')
 const createFill = document.querySelector('.create__fill');
 
-function showNotshowForm () {
+function hideNotFormElements () {
+  elementHidden.classList.add('hidden');
+  designArrowButton.classList.remove('fa-chevron-up');
+  designArrowButton.classList.add('fa-chevron-down');
+  createButton.classList.add('hidden');
+  arrowActiveShare.classList.remove('fa-chevron-up');
+  arrowActiveShare.classList.add('fa-chevron-down');
+  shareCardButton.classList.add('hidden')
+}
+
+function showOrHideForm () {
+  hideNotFormElements()
   if (form.classList.contains('hidden')) {
     form.classList.remove('hidden');
     arrowActiveForm.classList.remove('fa-chevron-down');
-    arrowActiveForm.classList.add('arrow-button-rotate ');
+    arrowActiveForm.classList.add('fa-chevron-up');
     createFill.style.padding = '0 0 30px 0';
-    elementHidden.classList.add('hidden');
-  createButton.classList.add('hidden');
   } else {
     form.classList.add('hidden');
     arrowActiveForm.classList.remove('fa-chevron-up');
     arrowActiveForm.classList.add('fa-chevron-down');
   }
 }
-function hiddeOthersElements () {
-  elementHidden.classList.add('hidden');
-  createButton.classList.add('hidden');
-}
 
-headerForm.addEventListener('click', showNotshowForm);
-headerForm.addEventListener('click', hiddeOthersElements);
+headerForm.addEventListener('click', showOrHideForm);
 
 //Desplegar share card
-let createButton = document.querySelector('.create-button');
-let shareButton = document.querySelector('.active-share');
-let shareSection = document.querySelector('.create__share');
+const createButton = document.querySelector('.create-button');
+const shareSection = document.querySelector('.create__share');
 const createIntroElement = document.querySelector('.create-intro');
 const arrowActiveShare = document.querySelector('.arrow-button-share');
+const createCardButton = document.querySelector('#create-button');
+const shareCardButton =  document.querySelector("#share-card");
 
-  function showNotShow() {
-    if (createButton.classList.contains('hidden')){
-      createButton.classList.remove('hidden');
-      arrowActiveShare.classList.remove('fa-chevron-down');
-      arrowActiveShare.classList.add('fa-chevron-up');
-      form.classList.add('hidden');
-      elementHidden.classList.add('hidden');
-    } else {
-      createButton.classList.add('hidden');
-      arrowActiveShare.classList.remove('fa-chevron-up');
-      arrowActiveShare.classList.add('fa-chevron-down');
-    }
+function hiddeNotShareElements() {
+  form.classList.add('hidden');
+  designArrowButton.classList.remove('fa-chevron-up');
+  designArrowButton.classList.add('fa-chevron-down');
+  elementHidden.classList.add('hidden');
+  arrowActiveForm.classList.remove('fa-chevron-up');
+  arrowActiveForm.classList.add('fa-chevron-down');
+}
+
+function showOrHideShare() {
+  hiddeNotShareElements();
+  if (createButton.classList.contains('hidden')){
+    createButton.classList.remove('hidden');
+    arrowActiveShare.classList.remove('fa-chevron-down');
+    arrowActiveShare.classList.add('fa-chevron-up');
+  } else {
+    createButton.classList.add('hidden');
+    arrowActiveShare.classList.remove('fa-chevron-up');
+    arrowActiveShare.classList.add('fa-chevron-down');
+    shareCardButton.classList.add('hidden');
   }
-  createIntroElement.addEventListener('click',showNotShow);
+}
+
+createIntroElement.addEventListener('click', showOrHideShare);
 
 //Desplegar ventana de compartir card
-const getElement = document.querySelector('#create-button');
-const shareCard =  document.querySelector("#share-card");
-
 function removeClass () {
-  shareCard.classList.remove('active-share');
+  shareCardButton.classList.remove('hidden');
 }
-getElement.addEventListener('click',removeClass);
 
-//cambiar colores preview
+createCardButton.addEventListener('click',removeClass);
 
+//Cambiar colores preview
 const name = document.querySelector('.preview__content__title');
 const contentBorder = document.querySelector('.preview__content');
 const previewElement = document.querySelector('.preview');
@@ -97,20 +119,6 @@ function changeColorOne () {
 }
 
 firstColors.addEventListener('click', changeColorOne)
-
-function showNotshowForm () {
-  if (form.classList.contains('hidden')) {
-    form.classList.remove('hidden');
-    arrowActiveForm.classList.remove('fa-chevron-down');
-    arrowActiveForm.classList.add('fa-chevron-up');
-    createFill.style.padding = '0 0 30px 0';
-  } else {
-    form.classList.add('hidden');
-    arrowActiveForm.classList.remove('fa-chevron-up');
-    arrowActiveForm.classList.add('fa-chevron-down');
-  }
-}
-headerForm.addEventListener('click', showNotshowForm);
 
 const secondColors = document.getElementById('color-two-selected');
 
