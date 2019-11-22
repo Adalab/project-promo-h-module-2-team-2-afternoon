@@ -43,10 +43,13 @@
       font-weight: 600;
       text-transform: uppercase;
       color: $white;
+      &:disabled {
+        background-color: #aaa;
+      }
       .fa-address-card {
         margin-right: rem(12);
         font-size: rem(22);
-      }  
+      } 
     }
   }
   
