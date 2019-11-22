@@ -7,7 +7,7 @@
 	justify-content: center;
 	border-top: rem(1) solid $white-two;
 	@media all  and (min-width:768px){
-		height: 6vh;
+		height: 7vh;
 		flex-direction: row;
 		justify-content: space-between;
 		align-content: center;
@@ -22,19 +22,21 @@
 		font-family: $OpenSans;
 		font-size: rem(14);
 		@media all  and (min-width:768px){
-			margin: rem(20) rem(0) rem(20) rem(0);
-		}    
+			margin: 0;
+		}
+		@media all  and (min-width:1200px){
+			margin: 0;
+		} 
 	}
 	&__logo{
 		width: rem(103);
-		height: rem(40);
 		margin-top: rem(12);
 		margin-bottom: rem(20);
 		&--photo{
 			width: 100%;
 		}
 		@media all  and (min-width:768px){
-			margin: rem(10) rem(0) rem(10) rem(0);
+			margin: 0;
 		}        
 	}
 }
