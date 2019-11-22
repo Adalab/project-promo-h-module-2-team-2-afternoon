@@ -23,25 +23,8 @@ const resetText = () => {
   elementEmail.href = '';
 }
 
-inputTitle.addEventListener('keyup', changeName);
-inputJob.addEventListener('keypress', changeJob);
-inputEmail.addEventListener('change', addEmail);
-inputLinkedin.addEventListener('keyup', addLinkedin);
-inputGithub.addEventListener('keyup', addGithub);
-inputMobile.addEventListener('keyup', addPhone);
+
 
 resetButton.addEventListener('click', resetForm);
 
 
-const elementEmail = document.querySelector('#js-email');
-const elementMobile = document.querySelector('#js-mobile');
-const elementLinkedin = document.querySelector('#js-linkedin');
-const elementGithub = document.querySelector('#git');
-const inputEmail = document.querySelector('#txtEmail');
-const inputMobile = document.querySelector('#txtPhoneNumber');
-const inputLinkedin = document.querySelector('#txtLinkedinUser');
-const inputGithub = document.querySelector('#txtGithubUser');
-
-function addIcons (){
-  elementEmail.classList.add('hidden-icons');
-}

@@ -19,32 +19,34 @@ const inputGithub = document.querySelector('#txtGithubUser');
 
 const changeName = () => elementTitle.innerHTML = inputTitle.value;
 const changeJob = () =>  elementJob.innerHTML = inputJob.value;
-const addLinkedin = () => elementLinkedin.href = inputLinkedin.value;
-const addGithub = () => elementGithub.href = inputGithub.value;
+const addLinkedin = () => {
+  elementLinkedin.classList.toggle('hidden-icons');
+  elementLinkedin.href = `https://linkedin.com/in/${inputLinkedin.value} `;
+}
+const addGithub = () => {
+  elementGithub.classList.toggle('hidden-icons');
+  elementGithub.href = `https://github.com/${inputGithub.value}`;
+}
 const addEmail = () => {
   elementEmail.href = `mailto: ${inputEmail.value}`;
+  elementEmail.classList.toggle('hidden-icons');
+
   ValidateEmail()
 }
+
 const addPhone = () => {
-  elementMobile.href = parseInt(inputMobile.value);
+  elementMobile.href = `tel: ${parseInt(inputMobile.value)}`;
+  elementMobile.classList.toggle('hidden-icons');
   ValidatePhone()
 }
- 
 
-
-const checkEmail = () => {
-  if (inputEmail.value = ""){
-  elementEmail.classList.add('fill-empty');
-  }
-}
-checkEmail ()
 
 function ValidateEmail() {
   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(inputEmail.value))
    {
      return (true)
    }
-     alert("Tu email es incorrecto")
+     addAlertValidator()
      return (false)
 }
 
@@ -55,6 +57,13 @@ function ValidatePhone () {
   alert("Tu teléfono es incorrecto")
      return (false)
 }
+
+const addAlertValidator = () =>{
+  const spanElement = document.createElement('span');
+  spanElement.innerHTML = `<span class="spanElement">El e-mail que has introducido es incorrecto</span>`
+  fatherForm.appendChild(spanElement);
+}
+const fatherForm = document.querySelector('.fill__form');
 
 
 function changeColorThree () {
@@ -78,3 +87,12 @@ function manageAddImageButton(){
 };
 
 btnAddImage.addEventListener('click', manageAddImageButton);
+
+
+inputTitle.addEventListener('keyup', changeName);
+inputJob.addEventListener('keypress', changeJob);
+inputEmail.addEventListener('change', addEmail);
+inputLinkedin.addEventListener('change', addLinkedin);
+inputGithub.addEventListener('change', addGithub);
+inputMobile.addEventListener('change', addPhone);
+
