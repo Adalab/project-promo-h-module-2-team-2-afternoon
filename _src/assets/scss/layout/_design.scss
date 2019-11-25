@@ -2,13 +2,14 @@
     padding: rem(20);
     padding-bottom: 0;
     padding-top: rem(27);
-    font-family: 'OpenSans', Arial;
+    font-family: $OpenSans;
     color: $gunmetal;
 
     &__design {
         text-transform: uppercase;
         padding-bottom: rem(7);
         border-bottom: rem(1) solid $white-two;
+        cursor: pointer;
         &--icon{
             color: $tomato;
             width: rem(21);
@@ -19,7 +20,7 @@
             font-size: rem(18);
             margin: rem(0) rem(0) rem(0) rem(10);
             font-weight: 600;
-            font-family: "Open Sans", sans-serif;
+            font-family: $OpenSans;
     
         }
         &--arrow {
