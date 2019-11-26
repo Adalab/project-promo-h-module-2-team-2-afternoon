@@ -51,19 +51,29 @@ function ValidateEmail() {
 }
 
 function ValidatePhone () {
-  if (/^[\s\S]{0,9}$/.test(inputMobile.value)) {
-    return (true)
-  }
-  alert("Tu teléfono es incorrecto")
+  if (/^[\s\S]{0,9}$/.test(inputMobile.value)) 
+   {
+     return (true)
+   }
+     addPhoneValidator ()
      return (false)
 }
 
 const addAlertValidator = () =>{
   const spanElement = document.createElement('span');
-  spanElement.innerHTML = `<span class="spanElement">El e-mail que has introducido es incorrecto</span>`
-  fatherForm.appendChild(spanElement);
+  spanElement.innerHTML = '*El e-mail que has introducido es incorrecto';
+  const fatherDiv = document.querySelector('.fill__form--container');
+  fatherDiv.appendChild(spanElement);
+
 }
-const fatherForm = document.querySelector('.fill__form');
+
+const addPhonetValidator = () =>{
+  const spanElement = document.createElement('span');
+  spanElement.innerHTML = '*El teléfono que has introducido es incorrecto';
+  const fatherDiv = document.querySelector('.fill__form--wrapper');
+  fatherDiv.appendChild(spanElement);
+
+}
 
 
 function changeColorThree () {

@@ -1,3 +1,6 @@
+a:link{
+	text-decoration-color: none;
+}
 
 .main{
 	width: 100%;
@@ -130,24 +133,31 @@
 		border-radius: 21px;
 		font-weight: 600;
 		background-color: $dirtyblue;
+		color: white;
+		font-family: $OpenSans;
+		font-size: rem(16);
+		text-transform: uppercase;
 		margin-top: rem(40);
 		margin-bottom: rem(40);
 		display: flex;
 		justify-content: center;
 		align-items: center;
+      &:hover{
+        border: 2px solid $dirtyblue;
+				background-color: transparent;
+				color: $dirtyblue;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+      }
+		
 		@media all  and (min-width:768px){
-				margin-top: rem(40);
-				margin-bottom: rem(40);
+			margin-top: rem(40);
+			margin-bottom: rem(40);
 		}
 		@media all  and (min-width:1024px){
 			margin-top: rem(60);
 			margin-bottom: rem(70);
 		}
 	}
-	.button__text{
-		color: $white;
-		font-family: $OpenSans;
-		font-size: rem(16);
-		text-transform: uppercase;
-	}
 }
+
+
