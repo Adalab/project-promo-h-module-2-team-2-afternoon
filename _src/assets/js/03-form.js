@@ -52,11 +52,11 @@ function ValidateEmail() {
 
 function ValidatePhone () {
   if (/^[\s\S]{0,9}$/.test(inputMobile.value)) 
-   {
-     return (true)
-   }
-     addPhoneValidator ()
-     return (false)
+    {
+      return (true)
+    }
+      addPhoneValidator ()
+      return (false)
 }
 
 const addAlertValidator = () =>{
