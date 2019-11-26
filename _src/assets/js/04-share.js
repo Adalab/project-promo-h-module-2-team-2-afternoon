@@ -16,6 +16,7 @@ function validateInputs() {
       error.classList.remove('hidden');
     } else {
       createButtonElement.disabled = false;
+      error.classList.add('hidden');
       
     }
   }

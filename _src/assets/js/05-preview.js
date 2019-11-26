@@ -2,6 +2,8 @@
 
 const resetButton = document.getElementById('reset');
 function resetForm() {
+  shareCardButton.classList.add('hidden');
+  createButtonElement.disabled = true;
   document.querySelector('.fill__form').reset();
   document.querySelector('.create__design--form').reset();
   if(previewElement.classList.contains('blue')) {
