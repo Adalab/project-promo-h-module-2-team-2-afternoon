@@ -10,6 +10,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      cursor: pointer;
       .title {
         margin: 0;
         font-family: $OpenSans;
@@ -93,7 +94,7 @@
       border-radius: rem(3);
       font-size: rem(12);
       font-weight: 600;
-      font-family: 'Open Sans', sans-serif;
+      font-family: $OpenSans;
       margin-top: rem(5);
       
     }

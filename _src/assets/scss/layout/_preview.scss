@@ -45,7 +45,7 @@
 		width: rem(75);
 		height: rem(30);
 		background: transparent;
-		color: #54585a;
+		color: $gunmetal;
 		font-size: rem(10);
 		font-family: $OpenSans;
 		line-height: rem(20);
@@ -55,7 +55,7 @@
 	&__content {
 		border-left: solid rem(5) $dirtyblue;
 		&__title {
-			font-family: $titleCard;
+			font-family: $Montserrat;
 			font-weight: 700;
 			color: $darkblue;
 			font-size: rem(18);
@@ -65,9 +65,9 @@
 			margin-bottom: rem(4);
 		}
 		&__text {
-			font-family: $titleCard;
+			font-family: $Montserrat;
 			margin-left: rem(15);
-			color: #54585a;
+			color: $gunmetal;
 			margin-top: 0; 
 			margin-bottom: rem(10);
 			font-size: rem(16);
@@ -82,7 +82,7 @@
 .fa.fa-trash-o.fa-lg {
 	font-size: rem(10);
 	line-height: rem(20);
-	color: #54585a;
+	color: $gunmetal;
 	margin-right: rem(6);
 }
 
