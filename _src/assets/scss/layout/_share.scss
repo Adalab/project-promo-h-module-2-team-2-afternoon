@@ -3,7 +3,6 @@
   /*background-image: linear-gradient(to bottom, $beige, $white 9%);*/
   &__share {    
     padding-bottom: rem(7);
-    border-bottom: rem(1) solid $white-two;
     display: flex;
     flex-direction: column;
     .create-intro {
@@ -11,6 +10,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      cursor: pointer;
       .title {
         margin: 0;
         font-family: $OpenSans;
@@ -28,25 +28,43 @@
         color: $gunmetal;
       }
     }
-    .create-button {
-      width: rem(199);
-      height: rem(50);
-      margin: auto;
+    .validateInputsSection{
       margin-top: rem(30);
-      margin-bottom: rem(23);
-      background-color: $orange;
-      border: none;
-      border-radius: rem(12);
-      box-shadow: 0 rem(1) rem(6) 0 $shadow-button;
-      font-family: $OpenSans;
-      font-size: rem(18);
-      font-weight: 600;
-      text-transform: uppercase;
-      color: $white;
-      .fa-address-card {
-        margin-right: rem(12);
-        font-size: rem(22);
-      }  
+      margin-bottom: rem(25);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .create-button {
+        width: rem(199);
+        height: rem(50);
+        margin: auto;
+        background-color: $orange;
+        border: none;
+        border-radius: rem(12);
+        box-shadow: 0 rem(1) rem(6) 0 $shadow-button;
+        font-family: $OpenSans;
+        font-size: rem(18);
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $white;
+        &:disabled {
+          background-color: #aaa;
+        }
+        .fa-address-card {
+          margin-right: rem(12);
+          font-size: rem(22);
+        }
+      }
+      .error {
+        margin-bottom: 0;
+        color: red;
+        text-align: center;
+        margin-top: rem(15);
+      }
+      .hidden {
+        display: none;
+      }
     }
   }
   
@@ -58,7 +76,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-bottom: rem(1) solid $white-two;
+    border-top: rem(1) solid $white-two;
     .title-share {
       margin: 0;
       text-align: center;
@@ -76,7 +94,7 @@
       border-radius: rem(3);
       font-size: rem(12);
       font-weight: 600;
-      font-family: 'Open Sans', sans-serif;
+      font-family: $OpenSans;
       margin-top: rem(5);
       
     }
