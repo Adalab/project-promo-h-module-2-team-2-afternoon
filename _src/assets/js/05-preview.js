@@ -23,11 +23,8 @@ const resetText = () => {
   elementEmail.href = '';
 }
 
-inputTitle.addEventListener('keyup', changeName);
-inputJob.addEventListener('keypress', changeJob);
-inputEmail.addEventListener('change', addEmail);
-inputLinkedin.addEventListener('keyup', addLinkedin);
-inputGithub.addEventListener('keyup', addGithub);
-inputMobile.addEventListener('keyup', addPhone);
+
 
 resetButton.addEventListener('click', resetForm);
+
+
