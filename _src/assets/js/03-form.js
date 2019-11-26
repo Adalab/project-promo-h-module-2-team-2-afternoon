@@ -15,15 +15,11 @@ const inputMobile = document.querySelector('#txtPhoneNumber');
 const inputLinkedin = document.querySelector('#txtLinkedinUser');
 const inputGithub = document.querySelector('#txtGithubUser');
 
-
-let inputTitleValue = inputTitle.value;
-
-
-const changeName = () => elementTitle.innerHTML = inputTitleValue;
+const changeName = () => elementTitle.innerHTML = inputTitle.value;
 const changeJob = () =>  elementJob.innerHTML = inputJob.value;
 const addLinkedin = () => {
   elementLinkedin.classList.toggle('hidden-icons');
-  elementLinkedin.href = `https://linkedin.com/in/${inputLinkedin.value} `;
+  elementLinkedin.href = `https://linkedin.com/in/${inputLinkedin.value}`;
 }
 const addGithub = () => {
   elementGithub.classList.toggle('hidden-icons');
