@@ -16,10 +16,10 @@ const inputLinkedin = document.querySelector('#txtLinkedinUser');
 const inputGithub = document.querySelector('#txtGithubUser');
 
 
-let inputTitleValue = inputTitle.value;
 
 
-const changeName = () => elementTitle.innerHTML = inputTitleValue;
+
+const changeName = () => elementTitle.innerHTML = inputTitle.value;
 const changeJob = () =>  elementJob.innerHTML = inputJob.value;
 const addLinkedin = () => elementLinkedin.href = inputLinkedin.value;
 const addGithub = () => elementGithub.href = inputGithub.value;
