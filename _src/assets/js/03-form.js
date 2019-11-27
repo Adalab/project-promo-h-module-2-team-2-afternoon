@@ -15,13 +15,11 @@ const inputMobile = document.querySelector('#txtPhoneNumber');
 const inputLinkedin = document.querySelector('#txtLinkedinUser');
 const inputGithub = document.querySelector('#txtGithubUser');
 
-
-
 const changeName = () => elementTitle.innerHTML = inputTitle.value;
 const changeJob = () =>  elementJob.innerHTML = inputJob.value;
 const addLinkedin = () => {
   elementLinkedin.classList.toggle('hidden-icons');
-  elementLinkedin.href = `https://linkedin.com/in/${inputLinkedin.value} `;
+  elementLinkedin.href = `https://linkedin.com/in/${inputLinkedin.value}`;
 }
 const addGithub = () => {
   elementGithub.classList.toggle('hidden-icons');
@@ -52,11 +50,11 @@ function ValidateEmail() {
 
 function ValidatePhone () {
   if (/^[\s\S]{0,9}$/.test(inputMobile.value)) 
-   {
-     return (true)
-   }
-     addPhoneValidator ()
-     return (false)
+    {
+      return (true)
+    }
+      addPhoneValidator ()
+      return (false)
 }
 
 const addAlertValidator = () =>{

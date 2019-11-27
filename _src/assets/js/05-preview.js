@@ -2,6 +2,14 @@
 
 const resetButton = document.getElementById('reset');
 function resetForm() {
+  //Esconder el share card al hacer reset y la opción de compartir en TW en caso de que se hubiera pintado:
+  shareCardButton.classList.add('hidden');
+  createButtonElement.disabled = true;
+  createCardSection.classList.add('hidden');
+  arrowActiveShare.classList.remove('fa-chevron-up');
+  arrowActiveShare.classList.add('fa-chevron-down');
+
+  // Reset parte de Ana
   document.querySelector('.fill__form').reset();
   document.querySelector('.create__design--form').reset();
   if(previewElement.classList.contains('blue')) {
