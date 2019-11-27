@@ -7,6 +7,7 @@ else {
 const inputElements = document.querySelectorAll('input');
 const createButtonElement = document.getElementById('create-button');
 const error = document.querySelector('.error');
+const linkShare = document.querySelector('.link-share');
 function validateInputs() {
   for(let i = 0; i < inputElements.length; i++) {
     if (inputElements[i].value === '') {
