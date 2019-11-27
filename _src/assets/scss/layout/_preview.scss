@@ -79,11 +79,11 @@
 		}
 	}
 	&__image {
-		width: rem(200);
-		height: rem(200);
+		width: rem(235);
 		background-color: transparent;
 		background-position: center;
-		margin: rem(15);
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 }
 
