@@ -13,7 +13,6 @@ const colorTwo = document.querySelector('.color__two')
 const colorThree = document.querySelector('.color__three')
 
 const colorsForm = document.querySelector('.create__design--form');
-const colorsFormValue = colorsForm.value;
 
 function selectColor () {
   if(colorOne.checked) {
@@ -36,3 +35,9 @@ function selectColor () {
 }
 
 colorsForm.addEventListener('change', selectColor);
+
+function getColor() {
+  const selectedCheckbox = colorsForm.querySelector('input[checked]');
+  
+  return selectedCheckbox.value;
+}
