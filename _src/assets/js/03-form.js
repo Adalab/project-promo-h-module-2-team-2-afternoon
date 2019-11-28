@@ -127,7 +127,7 @@ function getImage(e){
 };
 
 function manageAddImageButton(){
-  btnFileAddImage.click();
+  btnFileAddImage.click();  
 };
 
 btnAddImage.addEventListener('click', manageAddImageButton);

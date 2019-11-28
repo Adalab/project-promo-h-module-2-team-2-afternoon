@@ -31,7 +31,7 @@ function createShareCard() {
     "linkedin": inputLinkedin.value,
     "github": inputGithub.value,
     "photo": photoSend 
-  };
+  }; 
 
   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card', {
     method: 'POST',
