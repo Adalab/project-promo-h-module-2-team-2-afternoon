@@ -48,6 +48,7 @@
         font-weight: 600;
         text-transform: uppercase;
         color: $white;
+        cursor: pointer;
         &:disabled {
           background-color: #aaa;
         }
@@ -112,6 +113,15 @@
       font-size: rem(14);
       font-weight: 400;
       text-transform: lowercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .shareInTwitter{
+        margin-bottom: 2px;
+        padding: 5px 10px;
+        cursor: pointer;
+        color: white;
+      }
       span {
         text-transform: capitalize;
       }

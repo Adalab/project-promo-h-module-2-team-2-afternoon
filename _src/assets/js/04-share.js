@@ -1,9 +1,5 @@
-/*if (camposValidos == false) {
-  botonEnviar.disabled = true;
-}
-else {
-  botonEnviar.disabled = false;
-}*/
+'use strict'
+
 const inputElements = document.querySelectorAll('input');
 const createButtonElement = document.getElementById('create-button');
 const error = document.querySelector('.error');
