@@ -45,7 +45,6 @@ function createShareCard() {
     .catch (function(error) { console.log(error); })
   }
 
-  debugger;
 function showURL(data){
   if(data.success){
     linkShare.innerHTML = data.cardURL;
