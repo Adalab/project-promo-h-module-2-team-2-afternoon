@@ -23,7 +23,7 @@ function getImageSrc(event){
 
 function createShareCard() {
   const data = {
-    "palette": getColor(),
+    "palette": 1,
     "name": inputTitle.value,
     "job": inputJob.value,
     "phone": inputMobile.value,
@@ -33,13 +33,12 @@ function createShareCard() {
     "photo": photoSend 
   }; 
 
-  fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card', {
+  fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
     method: 'POST',
     body: JSON.stringify(data),
     headers: {
       'content-type': 'application/json'
-    },
-    mode: 'no-cors'
+    }
   }).then (response => response.json())
     .then (data => showURL(data))
     .catch (function(error) { console.log(error); })
@@ -61,7 +60,7 @@ function shareTwitter(cardURL){
   const urlTwitter = encodeURIComponent('¡Acabo de crear esta tarjeta profesional con Awesome Profile Cards!');
   const hastag = encodeURIComponent('adalab,adalaber,frontend,development,profile');
   const finalURL = `https://twitter.com/intent/tweet?text=${urlTwitter}&url=${cardURL}&hashtags=${hastag}`;
-  linkToTwit.href = finalURL;
+  linkToTwitter.href = finalURL;
 }
 
 createButtonElement.addEventListener('click', getImageSrc);
