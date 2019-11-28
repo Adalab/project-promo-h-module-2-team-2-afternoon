@@ -30,8 +30,8 @@ function createShareCard() {
     "email": inputEmail.value,
     "linkedin": inputLinkedin.value,
     "github": inputGithub.value,
-    "photo": photoSend //COMPROBAR
-  }
+    "photo": photoSend 
+  };
 
   fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card', {
     method: 'POST',
@@ -42,10 +42,10 @@ function createShareCard() {
     mode: 'no-cors'
   }).then (response => response.json())
     .then (data => showURL(data))
-    .catch (function(error) { console.log(error); });
+    .catch (function(error) { console.log(error); })
   }
 
-
+  debugger;
 function showURL(data){
   if(data.success){
     linkShare.innerHTML = data.cardURL;
