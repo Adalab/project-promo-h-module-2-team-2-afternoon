@@ -143,12 +143,15 @@ a:link{
 		display: flex;
 		justify-content: center;
 		align-items: center;
-      &:hover{
-        border: 2px solid $dirtyblue;
-				background-color: transparent;
-				color: $dirtyblue;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-      }
+		.text-color{
+			color: $white;
+		}
+    //   &:hover{
+    //     border: 2px solid $dirtyblue;
+	// 			background-color: transparent;
+	// 			color: $dirtyblue;
+    //     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    //   }
 		
 		@media all  and (min-width:768px){
 			margin-top: rem(40);
