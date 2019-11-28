@@ -12,7 +12,6 @@
 // const inputGithub = document.querySelector('#txtGithubUser');
 
 
-
 const setInput = () => {
 
     const data = {
