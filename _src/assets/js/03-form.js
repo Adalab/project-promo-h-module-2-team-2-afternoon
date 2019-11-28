@@ -87,14 +87,30 @@ function changeColorThree () {
 thirdColors.addEventListener('click', changeColorThree);
 
 //Botón añadir imagen
+const fr = new FileReader();
 const btnAddImage = document.getElementById('btnAddImage');
+const btnFileAddImage = document.getElementById('btnFileAddImage');
+const profileImage = document.querySelector('.preview__image');
+const profilePreview = document.querySelector('.fill__image-preview');
+
+
+function writeImage() {
+  profileImage.src = fr.result;
+  profilePreview.style.backgroundImage = `url(${fr.result})`;
+};
+
+function getImage(e){
+  let myFile = e.currentTarget.files[0];
+  fr.addEventListener('load', writeImage);
+  fr.readAsDataURL(myFile);
+};
 
 function manageAddImageButton(){
-    const btnFileAddImage = document.getElementById('btnFileAddImage');
-    btnFileAddImage.click();
+  btnFileAddImage.click();
 };
 
 btnAddImage.addEventListener('click', manageAddImageButton);
+btnFileAddImage.addEventListener('change', getImage);
 
 
 inputTitle.addEventListener('keyup', changeName);

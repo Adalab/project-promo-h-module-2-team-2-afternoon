@@ -88,6 +88,9 @@
 			display: inline-block;
 			border: rem(1) solid $hospitalgreen;
 			margin-left: rem(20);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 	}
 }
