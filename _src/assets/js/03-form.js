@@ -125,7 +125,7 @@ function getImage(e){
   fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
 };
- 
+  
 function manageAddImageButton(){
   btnFileAddImage.click(); 
 };
