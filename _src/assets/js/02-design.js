@@ -17,42 +17,31 @@ const colorThree = document.querySelector('.color__three')
 const colorsForm = document.querySelector('.create__design--form');
 let radioColor = 1;
 
-function selectColor (event) {
+function selectColorEvent (event) {
+  selectColor(event.target.value);
+  saveLocalStorage();
+}
+
+function selectColor (selectedColor) {
   if(colorOne.checked) {
     previewElement.classList.add('blue');
     previewElement.classList.remove('yellow');
     previewElement.classList.remove('red');
-    radioColor = event.target.value
-    console.log(radioColor)
-
   }
 
   if(colorTwo.checked) {
     previewElement.classList.add('red');
     previewElement.classList.remove('blue');
     previewElement.classList.remove('yellow');
-    radioColor = event.target.value
-    console.log(radioColor)
   }
 
   if(colorThree.checked) {
     previewElement.classList.add('yellow');
     previewElement.classList.remove('red');
     previewElement.classList.remove('blue');
-    radioColor = event.target.value
-    console.log(radioColor)
   }
+
+  radioColor = selectedColor;
 }
 
-colorsForm.addEventListener('change', selectColor);
-
-let getColor = () => {
-  let selectedCheckbox = colorsForm.querySelector('input[checked]');
-
-  return selectedCheckbox.value;
-  
-}
-
-
-
-form.addEventListener('change', getColor);
+colorsForm.addEventListener('change', selectColorEvent);

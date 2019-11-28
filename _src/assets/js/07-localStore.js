@@ -10,46 +10,62 @@
 // const inputMobile = document.querySelector('#txtPhoneNumber');
 // const inputLinkedin = document.querySelector('#txtLinkedinUser');
 // const inputGithub = document.querySelector('#txtGithubUser');
+let selectedCheckbox = colorsForm.querySelector('input[checked]');
 
+const saveLocalStorage = () => {
+  if(colorOne.checked) {
+    radioColor = 1;
+  }
 
-const setInput = () => {
+  if(colorTwo.checked) {
+    radioColor = 2;
+  }
 
-    const data = {
-    //   palette: 
-      name: inputTitle.value,
-      job: inputJob.value,
-      email: inputEmail.value,
-      mobile: inputMobile.value,
-      linkedin: inputLinkedin.value,
-      github: inputGithub.value,
-    //   photo: srcPhoto
-    };
-  
-    localStorage.setItem("userDataFrom", JSON.stringify(data));
+  if(colorThree.checked) {
+    radioColor = 3;
+  }
+
+  const data = {
+    palette: radioColor,
+    name: inputTitle.value,
+    job: inputJob.value,
+    email: inputEmail.value,
+    mobile: inputMobile.value,
+    linkedin: inputLinkedin.value,
+    github: inputGithub.value,
+  //   photo: srcPhoto
   };
+  
+  localStorage.setItem("userDataFrom", JSON.stringify(data));
+};
 
  const getLocalStorage = () => {
     const getData = JSON.parse(localStorage.getItem("userDataFrom"));
-        if (getData) {
-            inputTitle.value = getData.name;
-            inputJob.value = getData.job;
-            inputEmail.value = getData.email;
-            inputMobile.value = getData.mobile;
-            inputLinkedin.value = getData.linkedin;
-            inputGithub.value = getData.github;
-        }
-        if (getData) {
-            elementTitle.innerHTML = getData.name;
-            elementJob.innerHTML = getData.job;
-            elementEmail.href = `mailto:${getData.email}`;
-            elementMobile.href = `tel:${getData.mobile}`;
-            elementLinkedin.href = `https://linkedin.com/in/${getData.linkedin}`;
-            elementGithub.href =  `https://github.com/${getData.github}`;
-        }
-}
-        
 
-window.addEventListener('keyup', setInput);
+    if (getData) {
+      const radioColorGet = getData.palette;
+      colorOne.checked = radioColorGet === 1;
+      colorTwo.checked = radioColorGet === 2;
+      colorThree.checked = radioColorGet === 3;
+      selectColor(radioColorGet);
+
+      inputTitle.value = getData.name;
+      inputJob.value = getData.job;
+      inputEmail.value = getData.email;
+      inputMobile.value = getData.mobile;
+      inputLinkedin.value = getData.linkedin;
+      inputGithub.value = getData.github;
+
+      elementTitle.innerHTML = getData.name;
+      elementJob.innerHTML = getData.job;
+      elementEmail.href = `mailto:${getData.email}`;
+      elementMobile.href = `tel:${getData.mobile}`;
+      elementLinkedin.href = `https://linkedin.com/in/${getData.linkedin}`;
+      elementGithub.href =  `https://github.com/${getData.github}`;
+    }
+}
+
+window.addEventListener('keyup', saveLocalStorage);
 window.addEventListener('load', getLocalStorage);
 
 
