@@ -47,26 +47,3 @@ function shareTwitter(cardURL){
 
 createButtonElement.addEventListener('click', createShareCard);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*function showURL(data){
-
-  if (data.success){
-    urlShare.innerHTML = '<a class="twitter-url" href=' + data.cardURL + ' target="_blank">' + data.cardURL + '</a>';
-  }
-  else {
-    urlShare.innerHTML = 'ERROR:' + data.error;
-  }
-}*/
