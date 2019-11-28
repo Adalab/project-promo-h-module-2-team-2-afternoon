@@ -23,7 +23,7 @@ function getImageSrc(event){
 
 function createShareCard() {
   const data = {
-    "palette": 1,
+    "palette": radioColor,
     "name": inputTitle.value,
     "job": inputJob.value,
     "phone": inputMobile.value,
