@@ -11,6 +11,7 @@ function resetForm() {
   elementMobile.href = '';
   elementGithub.href = '';
   elementEmail.href = '';
+  profilePreview.style.backgroundImage = 'url(./assets/images/girl.png)';
 
   //quitar mensajes de error email y telf
   const spanElementMobile =  document.querySelector('.fill__form--wrapper').lastChild;
