@@ -1,7 +1,6 @@
 
 .content {
 	width: 100%;
-	height: 75vh;
 	margin: 0;
 	background-image: linear-gradient(to bottom, $beige, $white 9%);
    
@@ -9,11 +8,14 @@
 
 	@include media ($tablet) {
 		width: 100%;
+		height: 85vh;
 		display: flex;
 		flex-direction: row-reverse;
 		justify-content: flex-end;
 		align-items: flex-start;
-		padding: rem(20) rem(15) rem(0) rem(15);
+		padding-left: 15;
+    	padding-right: 15;
+    	padding-top: 20px;
 	}
  
 }
@@ -26,11 +28,12 @@
 	grid-row: 1fr 1fr;
 	justify-content: center;
 	align-items: flex-start;
-	background-color: #DFDBE5;
-	background-image: url("/assets/images/background.png") ;
-	background-position: center; /* Center the image */
-	background-repeat: repeat; /* Do not repeat the image */
-	background-size: cover; 
+	background-color: #7dbb34;
+	//background-color: #DFDBE5;
+	//background-image: url("/assets/images/background.png") ;
+	//background-position: center; /* Center the image */
+	//background-repeat: repeat; /* Do not repeat the image */
+	//background-size: cover; 
 	// background: #bfcdd0;  /* fallback for old browsers */
 	// background: -webkit-linear-gradient(to top, #dde9ed, #bfcdd0);  /* Chrome 10-25, Safari 5.1-6 */
 	// background: linear-gradient(to top, #dde9ed, #bfcdd0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -60,7 +63,7 @@
 	}
 	&__content {
 		border-left: solid rem(5) $dirtyblue;
-		height: 70vh;
+
 		&__title {
 			font-family: $Montserrat;
 			font-weight: 700;
@@ -138,13 +141,16 @@
 }
 
 
+
 @include media ($tablet){
 	.content {
 		padding: rem(23) rem(40) rem(21);
 	}
 	.content-preview {
 		width: 100%;
-		min-width: rem(329);
+		height: 80vh;
+		background-color: #ed5a94;
+		
 	}
 	.preview {
 		border-radius: rem(2);
