@@ -207,3 +207,14 @@
 .hidden-icons{
 	opacity: 0.5;
 }
+
+@include media ($desktop){
+	.content-preview {
+		background-color:#ed5a94;
+
+	}
+	.preview {
+		
+		background-color: aquamarine;
+	}		
+}
