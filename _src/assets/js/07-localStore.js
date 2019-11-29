@@ -66,6 +66,15 @@ const saveLocalStorage = () => {
 
       profileImage.src = getData.photo;
 
+      //validación de los inputs en el localstore-load
+      if(inputMobile.value !== ''){
+        addPhoneValidator();
+      }
+
+      if(inputEmail.value !== ''){
+        addAlertValidator();
+      }
+
        //mantener opacidad si hay algo en los iconos
 
       if(inputLinkedin.value !== '') {
@@ -73,7 +82,7 @@ const saveLocalStorage = () => {
       } else {
         elementLinkedin.classList.add('hidden-icons'); 
       }
-      
+
       if(inputGithub.value !== '') {
         elementGithub.classList.remove('hidden-icons');
       } 

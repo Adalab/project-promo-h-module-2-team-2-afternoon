@@ -53,7 +53,8 @@ function ValidatePhone () {
     {
       return (true)
     }
-      addPhoneValidator ()
+    //alert('hola')
+      addPhoneValidator()
       return (false)
 }
 
@@ -66,11 +67,12 @@ const addAlertValidator = () =>{
 
 }
 
-const addPhonetValidator = () =>{
+const addPhoneValidator = () =>{
   const spanElement = document.createElement('span');
   spanElement.innerHTML = '*El teléfono que has introducido es incorrecto';
   const fatherDiv = document.querySelector('.fill__form--wrapper');
   fatherDiv.appendChild(spanElement);
+  spanElement.classList.add('errorEmail');
 
 }
 

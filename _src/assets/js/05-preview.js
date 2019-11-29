@@ -11,6 +11,13 @@ function resetForm() {
   elementMobile.href = '';
   elementGithub.href = '';
   elementEmail.href = '';
+
+  //quitar mensajes de error email y telf
+  const spanElementMobile =  document.querySelector('.fill__form--wrapper').lastChild;
+  spanElementMobile.remove();
+  const spanElementEmail =  document.querySelector('.fill__form--container').lastChild;
+  spanElementEmail.remove();
+
   //Esconder el share card al hacer reset y la opción de compartir en TW en caso de que se hubiera pintado:
   shareCardButton.classList.add('hidden');
   createButtonElement.disabled = true;
