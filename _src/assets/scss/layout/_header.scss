@@ -3,11 +3,13 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: rem(30);
-	margin-top: rem(31);
+	padding-bottom: rem(15);
+	padding-top: rem(15);
 	@media all and (min-width:768px) {
+		height: 8vh;
 		align-items: baseline;
 		margin-left: rem(40);
+		padding: 0;
 	}
 }
 
