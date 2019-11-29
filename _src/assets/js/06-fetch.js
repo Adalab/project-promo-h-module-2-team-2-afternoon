@@ -7,7 +7,7 @@ function getImageSrc(event){
   event.preventDefault();
 
   if (!fr.result && !localStorage.getItem('image')){
-    photoSend = defaultImage;
+    photoSend = profileImage;
   }
 
   else if (!fr.result && localStorage.getItem('image')){

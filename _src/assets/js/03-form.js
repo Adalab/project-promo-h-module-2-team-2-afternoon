@@ -1,24 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 'use strict';
 
 //FORMULARIO
@@ -83,6 +62,7 @@ const addAlertValidator = () =>{
   spanElement.innerHTML = '*El e-mail que has introducido es incorrecto';
   const fatherDiv = document.querySelector('.fill__form--container');
   fatherDiv.appendChild(spanElement);
+  spanElement.classList.add('errorEmail');
 
 }
 
@@ -118,6 +98,7 @@ const profilePreview = document.querySelector('.fill__image-preview');
 function writeImage() {
   profileImage.src = fr.result;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
+  saveLocalStorage();
 };
 
 function getImage(e){
@@ -127,7 +108,8 @@ function getImage(e){
 };
   
 function manageAddImageButton(){
-  btnFileAddImage.click(); 
+  btnFileAddImage.click();
+
 };
 
 btnAddImage.addEventListener('click', manageAddImageButton);
@@ -135,7 +117,7 @@ btnFileAddImage.addEventListener('change', getImage);
 
 
 inputTitle.addEventListener('keyup', changeName);
-inputJob.addEventListener('keypress', changeJob);
+inputJob.addEventListener('keyup', changeJob);
 inputEmail.addEventListener('change', addEmail);
 inputLinkedin.addEventListener('change', addLinkedin);
 inputGithub.addEventListener('change', addGithub);

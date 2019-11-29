@@ -33,7 +33,8 @@ const saveLocalStorage = () => {
     mobile: inputMobile.value,
     linkedin: inputLinkedin.value,
     github: inputGithub.value,
-  //   photo: srcPhoto
+    photo: profileImage.src,
+    //iconPhoto:
   };
   
   localStorage.setItem("userDataFrom", JSON.stringify(data));
@@ -62,6 +63,26 @@ const saveLocalStorage = () => {
       elementMobile.href = `tel:${getData.mobile}`;
       elementLinkedin.href = `https://linkedin.com/in/${getData.linkedin}`;
       elementGithub.href =  `https://github.com/${getData.github}`;
+
+      profileImage.src = getData.photo;
+
+       //mantener opacidad si hay algo en los iconos
+
+      if(inputLinkedin.value !== '') {
+        elementLinkedin.classList.remove('hidden-icons');
+      } else {
+        elementLinkedin.classList.add('hidden-icons'); 
+      }
+      
+      if(inputGithub.value !== '') {
+        elementGithub.classList.remove('hidden-icons');
+      } 
+      if(inputMobile.value !== '') {
+        elementMobile.classList.remove('hidden-icons');
+      }
+      if(inputEmail.value !== '') {
+        elementEmail.classList.remove('hidden-icons');
+      } 
     }
 }
 
