@@ -49,4 +49,3 @@ function resetForm() {
 
 resetButton.addEventListener('click', resetForm);
 const emailContainer = document.querySelector('.fill__form--wrapper')
-console.log(emailContainer.childNodes.length === 5);

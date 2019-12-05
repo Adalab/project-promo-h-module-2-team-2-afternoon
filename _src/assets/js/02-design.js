@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 //Cambiar colores preview
 const name = document.querySelector('.preview__content__title');
 const contentBorder = document.querySelector('.preview__content');

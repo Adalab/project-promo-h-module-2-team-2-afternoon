@@ -54,8 +54,6 @@ function showURL(data){
   shareTwitter(data.cardURL);
 }
 
-//
-
 function shareTwitter(cardURL){
   const urlTwitter = encodeURIComponent('¡Acabo de crear esta tarjeta profesional con Awesome Profile Cards!');
   const hastag = encodeURIComponent('adalab,adalaber,frontend,development,profile');
