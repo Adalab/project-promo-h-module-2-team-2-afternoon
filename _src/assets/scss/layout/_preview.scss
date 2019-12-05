@@ -58,7 +58,16 @@
 		font-family: $OpenSans;
 		line-height: rem(20);
 		text-transform: uppercase;
-		align-self: flex-end;   
+		align-self: flex-end;
+		cursor: pointer;
+		&:hover {
+			border: 2px solid $white;
+			background-color: #7dbb34;
+			color: $white;
+			font-size: rem(12);
+			transition: color ease-in 500ms;
+			transition: background-color ease-in 500ms;
+		}
 	}
 	&__content {
 		border-left: solid rem(5) $dirtyblue;
@@ -93,8 +102,6 @@
 
 .fa.fa-trash-o.fa-lg {
 	font-size: rem(10);
-	line-height: rem(20);
-	color: $gunmetal;
 	margin-right: rem(6);
 }
 
