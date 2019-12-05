@@ -43,9 +43,10 @@ function resetForm() {
     previewElement.classList.remove('yellow');
     previewElement.classList.add('blue');
   }
+  saveLocalStorage();
 }
 
 
 resetButton.addEventListener('click', resetForm);
-
-
+const emailContainer = document.querySelector('.fill__form--wrapper')
+console.log(emailContainer.childNodes.length === 5);
