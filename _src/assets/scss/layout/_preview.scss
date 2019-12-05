@@ -62,7 +62,7 @@
 		cursor: pointer;
 		&:hover {
 			border: 2px solid $white;
-			background-color: #7dbb34;
+			background-color: transparent;
 			color: $white;
 			font-size: rem(12);
 			transition: color ease-in 500ms;
